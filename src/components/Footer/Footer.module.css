@@ -1,0 +1,22 @@
+/* @/components/Footer/Footer.module.css */
+
+.component {
+  @apply w-full px-12 pt-16 pb-48;
+  @apply bg-zinc-900 text-zinc-50;
+}
+
+.box {
+  @apply w-full;
+  @apply flex items-center justify-center;
+}
+
+.body {
+  @apply w-full;
+  @apply grid grid-cols-3;
+  @apply place-items-stretch;
+  @apply text-xl text-center;
+}
+
+.item {
+  @apply flex flex-col items-center justify-center;
+}

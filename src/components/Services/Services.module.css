@@ -1,0 +1,95 @@
+/* @/components/Services/Services.module.css */
+
+.component {
+  @apply w-full;
+  @apply flex flex-col;
+  @apply bg-zinc-900;
+}
+
+.head {
+  @apply relative;
+  @apply w-full h-full px-4 pt-32 pb-16;
+  @apply bg-zinc-900;
+  @apply text-zinc-50;
+}
+
+.head .image {
+  @apply static top-0 left-0;
+  @apply w-full h-full;
+}
+
+.head .image img {
+  @apply absolute bottom-0 -right-1/4;
+  @apply w-full h-3/4;
+  @apply opacity-15;
+  @apply object-contain object-right-bottom;
+}
+
+.head .title {
+  @apply w-full max-w-3xl mx-auto mb-16;
+  @apply text-5xl text-center;
+}
+
+.head .text {
+  @apply w-full max-w-3xl mx-auto mb-16;
+  @apply text-xl text-center;
+}
+
+.body {
+  @apply relative;
+  @apply flex-1 py-24 pl-4 pr-16;
+  @apply bg-zinc-50;
+}
+
+.body > .image {
+  @apply absolute top-0 left-0;
+  @apply overflow-hidden;
+  @apply w-full h-full;
+  @apply bg-zinc-50;
+}
+
+.body > .image img {
+  @apply absolute top-0 left-0;
+  @apply w-auto h-full;
+  @apply object-cover object-center;
+  @apply blur-sm opacity-50;
+}
+
+.body .table {
+  @apply relative;
+  @apply w-full max-w-6xl mx-auto;
+  @apply grid grid-cols-3;
+  @apply gap-x-16 gap-y-16;
+}
+
+.body .table .cell {
+  @apply relative flex;
+  @apply bg-zinc-700 rounded-lg;
+  @apply text-zinc-50;
+}
+
+.body .table .cell > .image img {
+  @apply absolute -top-12 -right-12;
+  @apply w-32 h-auto;
+  @apply rounded-3xl;
+}
+
+.body .table .cell .content {
+  @apply flex-1 py-8 pl-4 pr-2;
+  @apply flex flex-col justify-center;
+}
+
+.body .table .cell .content .title {
+  @apply mb-4 mr-16;
+  @apply text-lg;
+  @apply text-amber-500 font-sans font-semibold;
+}
+
+.body .table .cell .content .list {
+  @apply pl-4;
+}
+
+.body .table .cell .content .text {
+  @apply list-disc;
+  @apply text-base font-sans;
+}

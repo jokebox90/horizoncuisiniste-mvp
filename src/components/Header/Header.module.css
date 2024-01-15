@@ -1,0 +1,51 @@
+/* @/components/Header/Header.module.css */
+
+.header {
+  @apply relative;
+  @apply w-full h-max;
+  @apply flex;
+  @apply bg-zinc-900 text-zinc-50;
+  @apply font-serif text-base;
+}
+
+.content {
+  @apply relative w-full flex;
+}
+
+.logo {
+  @apply w-full max-w-md;
+  @apply flex items-center justify-center;
+}
+
+.logo img {
+  @apply w-2/3 h-auto;
+  @apply bg-zinc-800 rounded-full;
+}
+
+.body {
+  @apply relative;
+  @apply flex-1 pt-24 p-8;
+}
+
+.body .bg {
+  @apply absolute top-0 left-0;
+  @apply overflow-hidden;
+  @apply w-full h-full;
+}
+
+.body .bg .image {
+  @apply w-full h-full;
+  @apply flex items-center justify-end;
+  @apply object-cover object-center;
+}
+
+.body .bg .image img {
+  @apply w-auto h-full;
+  @apply object-fill object-center;
+}
+
+.body .inner {
+  @apply relative w-full max-w-lg p-16;
+  @apply flex flex-col;
+  @apply bg-zinc-950 bg-opacity-40 rounded-lg;
+}

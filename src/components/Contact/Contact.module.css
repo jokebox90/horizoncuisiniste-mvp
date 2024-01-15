@@ -1,0 +1,57 @@
+/* @/components/Contact/Contact.module.css */
+
+.component {
+  @apply relative;
+  @apply w-full h-max;
+  @apply bg-zinc-50 text-zinc-950;
+  @apply font-serif text-base;
+}
+
+.box {
+  @apply relative w-full flex;
+}
+
+.head {
+  @apply relative overflow-hidden;
+  @apply w-1/2 px-12 pt-32 pb-16;
+  @apply flex flex-col items-center justify-center;
+  @apply bg-zinc-50 text-zinc-950;
+}
+
+.head .title {
+  @apply w-full max-w-xl mx-auto;
+  @apply font-sans text-5xl mb-8;
+}
+
+.head .text {
+  @apply w-full max-w-3xl mx-auto mb-6;
+  @apply font-sans text-xl text-justify;
+}
+
+.head .image {
+  @apply absolute bottom-0 right-0;
+  @apply w-[175%] h-full;
+}
+
+.head .image img {
+  @apply w-auto h-full;
+  @apply rounded-3xl opacity-15;
+  @apply object-contain object-right-bottom;
+}
+
+.body {
+  @apply z-0 relative;
+  @apply flex-1;
+  @apply bg-zinc-900;
+}
+
+.body .image {
+  @apply relative;
+  @apply w-full h-full;
+}
+
+.body .image img {
+  @apply absolute top-0 left-0;
+  @apply w-auto h-full;
+  @apply object-cover object-center;
+}
