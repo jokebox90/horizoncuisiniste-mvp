@@ -137,8 +137,10 @@ export default function Services() {
               <div className={styles.content}>
                 <h3 className={styles.title}>{item.title}</h3>
                 <ul className={styles.list}>
-                  {item.items.map((val) => (
-                    <li className={styles.text}>{val}</li>
+                  {item.items.map((val, index) => (
+                    <li key={index} className={styles.text}>
+                      {val}
+                    </li>
                   ))}
                 </ul>
               </div>
