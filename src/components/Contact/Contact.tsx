@@ -26,13 +26,13 @@ export default function Contact() {
           <h2 className={styles.title}>Contactez-nous</h2>
 
           <p className={styles.text}>
-            Les défis de l'aménagement intérieur et des rénovatiions vous ont
+            Les défis de l&apos;aménagement intérieur et des rénovatiions vous ont
             poussé à trouver une expertise fiable.
           </p>
 
           <p className={styles.text}>
             Sans une intervention adaptée, le cumul des problèmes peut nuire à
-            l'esthétique et au fonctionnement de votre environnement.
+            l&apos;esthétique et au fonctionnement de votre environnement.
           </p>
 
           <p className={styles.text}>

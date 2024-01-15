@@ -15,7 +15,7 @@ import revetementsJPG from "@/static/img/revetements.jpg";
 import salonJPG from "@/static/img/salon.jpg";
 import Image from "next/image";
 
-export default function () {
+export default function Services() {
   const services = [
     {
       title: "Électricité",
