@@ -121,7 +121,7 @@ export default function Services() {
           <Image src={salonJPG} alt="Logo" width={1280} height={960} />
         </div>
 
-        <div className={styles.table}>
+        <div className={styles.cards}>
           <div className="col-span-full mb-8 flex justify-center">
             <Image
               src={design1PNG}
@@ -133,7 +133,7 @@ export default function Services() {
           </div>
 
           {services.map((item, index) => (
-            <div key={index} className={styles.cell}>
+            <div key={index} className={styles.card}>
               <div className={styles.content}>
                 <h3 className={styles.title}>{item.title}</h3>
                 <ul className={styles.list}>

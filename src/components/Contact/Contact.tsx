@@ -11,6 +11,7 @@ import {
   faRoad,
   faUserCheck,
 } from "@fortawesome/free-solid-svg-icons";
+import Button from "../Button/Button";
 
 export default function Contact() {
   return (
@@ -26,8 +27,8 @@ export default function Contact() {
           <h2 className={styles.title}>Contactez-nous</h2>
 
           <p className={styles.text}>
-            Les défis de l&apos;aménagement intérieur et des rénovatiions vous ont
-            poussé à trouver une expertise fiable.
+            Les défis de l&apos;aménagement intérieur et des rénovatiions vous
+            ont poussé à trouver une expertise fiable.
           </p>
 
           <p className={styles.text}>
@@ -41,45 +42,36 @@ export default function Contact() {
             attentes décoratives.
           </p>
 
-          <div className="w-full pt-8">
-            <ul className="text-3xl font-sans font-bold flex flex-col gap-8">
-              <li className="inline-flex gap-6 items-center">
-                <FontAwesomeIcon
-                  icon={faUserCheck}
-                  className="w-8 h-8 text-amber-600"
-                />
+          <div className={styles.list}>
+            <ul>
+              <li>
+                <FontAwesomeIcon icon={faUserCheck} className={styles.icon} />
                 BONDYBUILDER
               </li>
-              <li className="inline-flex gap-6 items-center">
-                <FontAwesomeIcon
-                  icon={faMobilePhone}
-                  className="w-8 h-8 text-amber-600"
-                />
+
+              <li>
+                <FontAwesomeIcon icon={faMobilePhone} className={styles.icon} />
                 01 23 45 67 89
               </li>
-              <li className="inline-flex gap-6 items-center">
-                <FontAwesomeIcon
-                  icon={faRoad}
-                  className="w-8 h-8 text-amber-600"
-                />
+
+              <li>
+                <FontAwesomeIcon icon={faRoad} className={styles.icon} />
                 123, rue du Paradis
               </li>
-              <li className="inline-flex gap-6 items-center">
-                <FontAwesomeIcon
-                  icon={faCity}
-                  className="w-8 h-8 text-amber-600"
-                />
+
+              <li>
+                <FontAwesomeIcon icon={faCity} className={styles.icon} />
                 54321, Saint-Tillant
               </li>
             </ul>
           </div>
 
-          <div className="w-full pt-16 pb-16 flex items-center justify-center">
-            <button className="w-full max-w-xs px-2 py-4 bg-gradient-to-b from-amber-500 via-amber-500 to-amber-600 font-bold text-center text-2xl text-amber-50 rounded-xl shadow-2xl border-2 border-amber-600">
+          <div className={styles.buttons}>
+            <Button>
               Obtenir un devis dès
               <br />
               maintenant !
-            </button>
+            </Button>
           </div>
 
           <div className={styles.image}>

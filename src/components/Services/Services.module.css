@@ -1,14 +1,16 @@
 /* @/components/Services/Services.module.css */
 
 .component {
-  @apply w-full;
+  @apply w-full min-h-screen sm:min-h-max;
   @apply flex flex-col;
   @apply bg-zinc-900;
 }
 
 .head {
   @apply relative;
-  @apply w-full h-full px-4 pt-32 pb-16;
+  @apply w-full h-full;
+  @apply px-6 py-12;
+  @apply sm:pt-32 sm:pb-16;
   @apply bg-zinc-900;
   @apply text-zinc-50;
 }
@@ -26,18 +28,20 @@
 }
 
 .head .title {
-  @apply w-full max-w-3xl mx-auto mb-16;
-  @apply text-5xl text-center;
+  @apply w-full max-w-3xl mx-auto mb-8 sm:mb-16;
+  @apply text-3xl sm:text-5xl text-center;
 }
 
 .head .text {
-  @apply w-full max-w-3xl mx-auto mb-16;
+  @apply w-full max-w-3xl mx-auto;
   @apply text-xl text-center;
 }
 
 .body {
-  @apply relative;
-  @apply flex-1 py-24 pl-4 pr-16;
+  @apply relative flex-1;
+  @apply w-full py-12 pl-4 pr-6;
+  @apply sm:py-24 sm:pl-4 sm:pr-16;
+  @apply flex flex-col;
   @apply bg-zinc-50;
 }
 
@@ -55,41 +59,41 @@
   @apply blur-sm opacity-50;
 }
 
-.body .table {
+.body .cards {
   @apply relative;
   @apply w-full max-w-6xl mx-auto;
-  @apply grid grid-cols-3;
+  @apply grid sm:grid-cols-3;
   @apply gap-x-16 gap-y-16;
 }
 
-.body .table .cell {
+.body .cards .card {
   @apply relative flex;
   @apply bg-zinc-700 rounded-lg;
   @apply text-zinc-50;
 }
 
-.body .table .cell > .image img {
-  @apply absolute -top-12 -right-12;
-  @apply w-32 h-auto;
+.body .cards .card > .image img {
+  @apply absolute -top-12 -right-4 sm:-right-12;
+  @apply w-24 sm:w-32 h-auto;
   @apply rounded-3xl;
 }
 
-.body .table .cell .content {
+.body .cards .card .content {
   @apply flex-1 py-8 pl-4 pr-2;
   @apply flex flex-col justify-center;
 }
 
-.body .table .cell .content .title {
+.body .cards .card .content .title {
   @apply mb-4 mr-16;
-  @apply text-lg;
-  @apply text-amber-500 font-sans font-semibold;
+  @apply text-lg text-amber-500;
+  @apply font-sans font-semibold;
 }
 
-.body .table .cell .content .list {
+.body .cards .card .content .list {
   @apply pl-4;
 }
 
-.body .table .cell .content .text {
+.body .cards .card .content .text {
   @apply list-disc;
   @apply text-base font-sans;
 }

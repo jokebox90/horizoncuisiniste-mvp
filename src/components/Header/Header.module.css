@@ -1,51 +1,60 @@
 /* @/components/Header/Header.module.css */
 
-.header {
+.component {
   @apply relative;
-  @apply w-full h-max;
-  @apply flex;
+  @apply w-full h-max min-h-screen;
+  @apply flex flex-col sm:flex-row;
   @apply bg-zinc-900 text-zinc-50;
   @apply font-serif text-base;
 }
-
-.content {
-  @apply relative w-full flex;
-}
-
-.logo {
-  @apply w-full max-w-md;
+.component > .image {
+  @apply w-full max-w-md sm:pt-0;
   @apply flex items-center justify-center;
 }
 
-.logo img {
-  @apply w-2/3 h-auto;
-  @apply bg-zinc-800 rounded-full;
+.component > .image img {
+  @apply w-80 sm:w-2/3 h-auto;
+  @apply sm:bg-zinc-800 rounded-full;
 }
 
 .body {
-  @apply relative;
-  @apply flex-1 pt-24 p-8;
+  @apply relative flex-1;
+  @apply px-6 py-2 sm:pt-24;
+  @apply flex items-center justify-start;
 }
 
-.body .bg {
+.body .image {
   @apply absolute top-0 left-0;
-  @apply overflow-hidden;
-  @apply w-full h-full;
-}
-
-.body .bg .image {
   @apply w-full h-full;
   @apply flex items-center justify-end;
   @apply object-cover object-center;
 }
 
-.body .bg .image img {
+.body .image img {
   @apply w-auto h-full;
   @apply object-fill object-center;
 }
 
-.body .inner {
-  @apply relative w-full max-w-lg p-16;
+.body .content {
+  @apply relative w-full max-w-lg p-4 sm:p-16;
   @apply flex flex-col;
   @apply bg-zinc-950 bg-opacity-40 rounded-lg;
+  @apply whitespace-break-spaces break-words;
+  @apply sm:whitespace-normal sm:break-words;
+}
+
+.body .content .company {
+  @apply uppercase font-bold font-sans;
+}
+
+.body .content .divider {
+  @apply w-1/6 mt-3 mb-4 sm:mb-16 bg-amber-500 h-1;
+}
+
+.body .content .title {
+  @apply font-sans text-3xl sm:text-5xl mb-4;
+}
+
+.body .content .text {
+  @apply font-handwriting text-xl sm:text-4xl mb-8;
 }

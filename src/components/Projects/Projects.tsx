@@ -12,6 +12,7 @@ import logoPNG from "@/static/img/logo.png";
 import salleDeBainJPG from "@/static/img/salle-de-bain.jpg";
 import salonJPG from "@/static/img/salon.jpg";
 import Image from "next/image";
+import Button from "../Button/Button";
 
 export default function Projects() {
   const espaces = [
@@ -62,20 +63,19 @@ export default function Projects() {
         </div>
 
         <div className={styles.body}>
-          <div className="w-full mb-16 flex items-center justify-center">
+          <div className={styles.image}>
             <Image
               src={design1PNG}
               alt="Salon"
               width={320}
               height={240}
-              className="w-auto h-24"
             />
           </div>
 
           <div className={styles.content}>
-            <div className={styles.table}>
+            <div className={styles.cards}>
               {espaces.map((item, index) => (
-                <div key={index} className={styles.cell}>
+                <div key={index} className={styles.card}>
                   <div className={styles.image}>
                     <Image
                       src={item.image}
@@ -91,11 +91,11 @@ export default function Projects() {
             </div>
 
             <div className="w-full pt-16 pb-16 flex items-center justify-center">
-              <button className="w-full max-w-xs px-2 py-4 bg-gradient-to-b from-amber-500 via-amber-500 to-amber-600 font-bold text-center text-2xl text-amber-50 rounded-xl shadow-2xl border-2 border-amber-600">
+              <Button>
                 Obtenir un devis dès
                 <br />
                 maintenant !
-              </button>
+              </Button>
             </div>
           </div>
         </div>

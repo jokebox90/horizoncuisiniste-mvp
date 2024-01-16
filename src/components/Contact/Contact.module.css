@@ -8,19 +8,20 @@
 }
 
 .box {
-  @apply relative w-full flex;
+  @apply relative w-full flex flex-col sm:flex-row;
 }
 
 .head {
   @apply relative overflow-hidden;
-  @apply w-1/2 px-12 pt-32 pb-16;
+  @apply w-full px-6 pt-8 pb-4;
+  @apply sm:w-1/2 sm:px-12 sm:pt-32 sm:pb-16;
   @apply flex flex-col items-center justify-center;
   @apply bg-zinc-50 text-zinc-950;
 }
 
 .head .title {
-  @apply w-full max-w-xl mx-auto;
-  @apply font-sans text-5xl mb-8;
+  @apply w-full max-w-xl mx-auto mb-8;
+  @apply font-sans text-3xl sm:text-5xl;
 }
 
 .head .text {
@@ -39,8 +40,33 @@
   @apply object-contain object-right-bottom;
 }
 
+.head .list {
+  @apply w-full sm:pt-8;
+}
+
+.head .list ul {
+  @apply flex flex-col gap-8;
+}
+
+.head .list li {
+  @apply inline-flex gap-6 items-center;
+  @apply text-xl sm:text-3xl font-sans font-bold;
+}
+
+.head .list .icon {
+  @apply w-5 h-5;
+  @apply sm:w-8 sm:h-8;
+  @apply text-amber-600;
+}
+
+.head .buttons {
+  @apply w-full pt-12 pb-16;
+  @apply sm:pt-16 sm:pb-16;
+  @apply flex items-center justify-center;
+}
+
 .body {
-  @apply z-0 relative;
+  @apply relative;
   @apply flex-1;
   @apply bg-zinc-900;
 }
@@ -51,7 +77,7 @@
 }
 
 .body .image img {
-  @apply absolute top-0 left-0;
+  @apply sm:absolute top-0 left-0;
   @apply w-auto h-full;
   @apply object-cover object-center;
 }

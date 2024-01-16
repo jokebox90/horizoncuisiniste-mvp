@@ -1,7 +1,8 @@
 /* @/components/Footer/Footer.module.css */
 
 .component {
-  @apply w-full px-12 pt-16 pb-48;
+  @apply w-full px-6 pt-12 pb-16;
+  @apply sm:px-12 sm:pt-16 sm:pb-48;
   @apply bg-zinc-900 text-zinc-50;
 }
 
@@ -12,7 +13,7 @@
 
 .body {
   @apply w-full;
-  @apply grid grid-cols-3;
+  @apply grid sm:grid-cols-3 gap-y-12;
   @apply place-items-stretch;
   @apply text-xl text-center;
 }
