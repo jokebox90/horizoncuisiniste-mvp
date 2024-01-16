@@ -7,13 +7,17 @@
   @apply bg-zinc-900 text-zinc-50;
   @apply font-serif text-base;
 }
-.component > .image {
-  @apply w-full max-w-md sm:pt-0;
+.head {
+  @apply w-full max-w-md;
+  @apply flex items-center justify-center;
+}
+.head .image {
+  @apply w-80 sm:w-2/3;
   @apply flex items-center justify-center;
 }
 
-.component > .image img {
-  @apply w-80 sm:w-2/3 h-auto;
+.head .image img {
+  @apply w-full h-auto;
   @apply sm:bg-zinc-800 rounded-full;
 }
 
@@ -21,6 +25,7 @@
   @apply relative flex-1;
   @apply px-6 py-2 sm:pt-24;
   @apply flex items-center justify-start;
+  @apply bg-zinc-50;
 }
 
 .body .image {

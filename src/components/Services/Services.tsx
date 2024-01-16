@@ -14,8 +14,21 @@ import plomberieJPG from "@/static/img/plomberie.jpg";
 import revetementsJPG from "@/static/img/revetements.jpg";
 import salonJPG from "@/static/img/salon.jpg";
 import Image from "next/image";
+import { motion, useInView } from "framer-motion";
+import { variants } from "../Animate/Animate.variants";
+import { useRef } from "react";
+import Button from "../Button/Button";
 
 export default function Services() {
+  const ref = useRef<HTMLDivElement>(null);
+  const ref2 = useRef<HTMLDivElement>(null);
+  const ref3 = useRef<HTMLDivElement>(null);
+  const ref4 = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref);
+  const isInView2 = useInView(ref2);
+  const isInView3 = useInView(ref3);
+  const isInView4 = useInView(ref4);
+
   const services = [
     {
       title: "Électricité",
@@ -98,62 +111,107 @@ export default function Services() {
     },
   ];
   return (
-    <article className={styles.component}>
+    <article ref={ref} className={styles.component}>
       <div className={styles.head}>
-        <div className={styles.image}>
-          <Image src={design2PNG} alt="Salon" width={320} height={240} />
-        </div>
+        <motion.div
+          initial="revealInitial"
+          animate={isInView ? "reveal" : "revealInitial"}
+          variants={variants}
+          className={styles.image}
+        >
+          <Image src={design2PNG} alt="Design 2" width={320} height={240} />
+        </motion.div>
 
-        <h2 className={styles.title}>
-          Quels services pour réaliser vos projets ?
-        </h2>
+        <motion.div
+          initial="slideInRightInitial"
+          animate={isInView ? "slideInRightEarly" : "slideInRightInitial"}
+          variants={variants}
+        >
+          <h2 className={styles.title}>
+            Quels services pour réaliser vos projets ?
+          </h2>
 
-        <p className={styles.text}>
-          Chaque membre de notre équipe est qualifié pour vous apporter une
-          expertise polichée. Nous collaborons à chaque instant pour trouver des
-          solutions élégantes à vos défis de décoration et de rénovation. Vos
-          espaces sont ainsi repensés pour une meilleure qualité de vie.
-        </p>
+          <p className={styles.text}>
+            Chaque membre de notre équipe est qualifié pour vous apporter une
+            expertise polichée. Nous collaborons à chaque instant pour trouver
+            des solutions élégantes à vos défis de décoration et de rénovation.
+            Vos espaces sont ainsi repensés pour une meilleure qualité de vie.
+          </p>
+        </motion.div>
       </div>
 
-      <div className={styles.body}>
+      <div ref={ref2} className={styles.body}>
         <div className={styles.image}>
-          <Image src={salonJPG} alt="Logo" width={1280} height={960} />
+            <Image src={salonJPG} alt="Logo" width={1280} height={960} />
+          <div className="absolute top-0 left-0 w-full h-full bg-zinc-50 opacity-50"></div>
         </div>
 
-        <div className={styles.cards}>
+        <div ref={ref3} className={styles.cards}>
           <div className="col-span-full mb-8 flex justify-center">
-            <Image
-              src={design1PNG}
-              alt="Salon"
-              width={320}
-              height={240}
+            <motion.div
+              initial="slideInDownInitial"
+              animate={isInView2 ? "slideInDownEarly" : "slideInDownInitial"}
+              variants={variants}
               className="w-auto h-24"
-            />
+            >
+              <Image
+                src={design1PNG}
+                alt="Design 1"
+                width={320}
+                height={240}
+                className="w-auto h-24"
+              />
+            </motion.div>
           </div>
 
           {services.map((item, index) => (
             <div key={index} className={styles.card}>
               <div className={styles.content}>
-                <h3 className={styles.title}>{item.title}</h3>
-                <ul className={styles.list}>
-                  {item.items.map((val, index) => (
-                    <li key={index} className={styles.text}>
-                      {val}
-                    </li>
-                  ))}
-                </ul>
+                <motion.div
+                  initial="slideInRightInitial"
+                  animate={isInView2 ? "slideInRight" : "slideInRightInitial"}
+                  variants={variants}
+                >
+                  <h3 className={styles.title}>{item.title}</h3>
+                  <ul className={styles.list}>
+                    {item.items.map((val, index) => (
+                      <li key={index} className={styles.text}>
+                        {val}
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
               </div>
-              <div className={styles.image}>
+              <motion.div
+                initial="revealInitial"
+                animate={isInView2 ? "reveal" : "revealInitial"}
+                variants={variants}
+                className={styles.image}
+              >
                 <Image
                   src={item.image}
                   alt={item.title}
                   width={320}
                   height={240}
                 />
-              </div>
+              </motion.div>
             </div>
           ))}
+
+          <div ref={ref4} className="col-span-full overflow-hidden">
+            <motion.div
+              initial="slideInDownInitial"
+              animate={isInView4 ? "slideInDownEarly" : "slideInDownInitial"}
+              variants={variants}
+              className="w-full pt-16 flex items-center justify-center"
+            >
+              <Button>
+                Obtenir un devis dès
+                <br />
+                maintenant !
+              </Button>
+            </motion.div>
+          </div>
         </div>
       </div>
     </article>

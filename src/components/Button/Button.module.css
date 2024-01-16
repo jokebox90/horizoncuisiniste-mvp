@@ -1,7 +1,7 @@
 /* @/components/Button/Button.module.css */
 
 .component {
-  @apply w-full max-w-xs px-2 pt-4 pb-2;
+  @apply w-full max-w-xs px-6 pt-4 pb-2;
   @apply bg-gradient-to-b from-amber-500 via-amber-500 to-amber-600;
   @apply font-sans font-semibold text-amber-50;
   @apply text-center text-lg sm:text-2xl leading-tight;

@@ -11,11 +11,20 @@ import {
   faRoad,
   faUserCheck,
 } from "@fortawesome/free-solid-svg-icons";
-import Button from "../Button/Button";
+import { motion, useInView } from "framer-motion";
+import { variants } from "@/components/Animate/Animate.variants";
+import Button from "@/components/Button/Button";
+import { useRef } from "react";
 
 export default function Contact() {
+  const ref = useRef<HTMLDivElement>(null);
+  const ref2 = useRef<HTMLDivElement>(null);
+  const ref3 = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref);
+  const isInView2 = useInView(ref2);
+  const isInView3 = useInView(ref3);
   return (
-    <article className={styles.component}>
+    <article ref={ref} className={styles.component}>
       <div className={styles.box}>
         <div className={styles.body}>
           <div className={styles.image}>
@@ -24,58 +33,85 @@ export default function Contact() {
         </div>
 
         <div className={styles.head}>
-          <h2 className={styles.title}>Contactez-nous</h2>
-
-          <p className={styles.text}>
-            Les défis de l&apos;aménagement intérieur et des rénovatiions vous
-            ont poussé à trouver une expertise fiable.
-          </p>
-
-          <p className={styles.text}>
-            Sans une intervention adaptée, le cumul des problèmes peut nuire à
-            l&apos;esthétique et au fonctionnement de votre environnement.
-          </p>
-
-          <p className={styles.text}>
-            Nous vous remercions de nous avoir choisis pour transformer ces
-            défis en solutions créatives et performantes, en harmonie avec vos
-            attentes décoratives.
-          </p>
-
-          <div className={styles.list}>
-            <ul>
-              <li>
-                <FontAwesomeIcon icon={faUserCheck} className={styles.icon} />
-                BONDY BUILDER
-              </li>
-
-              <li>
-                <FontAwesomeIcon icon={faMobilePhone} className={styles.icon} />
-                01 23 45 67 89
-              </li>
-
-              <li>
-                <FontAwesomeIcon icon={faRoad} className={styles.icon} />
-                123, rue du Paradis
-              </li>
-
-              <li>
-                <FontAwesomeIcon icon={faCity} className={styles.icon} />
-                54321, Saint-Tillant
-              </li>
-            </ul>
-          </div>
-
-          <div className={styles.buttons}>
-            <Button>
-              Obtenir un devis dès
-              <br />
-              maintenant !
-            </Button>
-          </div>
-
           <div className={styles.image}>
-            <Image src={designPNG} alt="Salon" width={1280} height={960} />
+            <Image src={designPNG} alt="Design 2" width={1280} height={960} />
+          </div>
+
+          <motion.div
+            initial="slideInRightInitial"
+            animate={isInView ? "slideInRightEarly" : "slideInRightInitial"}
+            variants={variants}
+          >
+            <h2 className={styles.title}>Contactez-nous</h2>
+
+            <p className={styles.text}>
+              Les défis de l&apos;aménagement intérieur et des rénovations vous
+              ont poussé à trouver une expertise fiable.
+            </p>
+
+            <p className={styles.text}>
+              Sans une intervention adaptée, le cumul des problèmes peut nuire à
+              l&apos;esthétique et au fonctionnement de votre environnement.
+            </p>
+
+            <p className={styles.text}>
+              Nous vous remercions de nous avoir choisis pour transformer ces
+              défis en solutions créatives et performantes, en harmonie avec vos
+              attentes décoratives.
+            </p>
+          </motion.div>
+
+          <div ref={ref2} className={styles.list}>
+            <motion.div
+              initial="slideInDownInitial"
+              animate={isInView2 ? "slideInDownEarly" : "slideInDownInitial"}
+              variants={variants}
+            >
+              <ul>
+                <li>
+                  <div className={styles.icon}>
+                    <FontAwesomeIcon icon={faUserCheck} />
+                  </div>
+                  BONDY BUILDER
+                </li>
+
+                <li>
+                  <div className={styles.icon}>
+                    <FontAwesomeIcon icon={faMobilePhone} />
+                  </div>
+                  01 23 45 67 89
+                </li>
+
+                <li>
+                  <div className={styles.icon}>
+                    <FontAwesomeIcon icon={faRoad} />
+                  </div>
+                  123, rue du Paradis
+                </li>
+
+                <li>
+                  <div className={styles.icon}>
+                    <FontAwesomeIcon icon={faCity} />
+                  </div>
+                  54321, Saint-Tillant
+                </li>
+              </ul>
+            </motion.div>
+          </div>
+
+          <div ref={ref3} className="w-full overflow-hidden">
+            <motion.div
+              initial="slideInDownInitial"
+              animate={isInView3 ? "slideInDownEarly" : "slideInDownInitial"}
+              variants={variants}
+              className={styles.buttons}
+            >
+              <Button>
+                Obtenir un devis dès
+                <br />
+                maintenant !
+              </Button>
+            </motion.div>
           </div>
         </div>
       </div>

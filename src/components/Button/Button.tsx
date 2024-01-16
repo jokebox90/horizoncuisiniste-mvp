@@ -8,7 +8,7 @@ interface ButtonProps {
   children: ReactNode[] | ReactNode;
 }
 
-export default function Button({ children }: ButtonProps) {
-  const classes = [styles.component].join(" ");
+export default function Button({ children, className }: ButtonProps) {
+  const classes = [className || "", styles.component].join(" ");
   return <button className={classes}>{children}</button>;
 }
