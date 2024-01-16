@@ -15,7 +15,7 @@
   @apply w-full;
   @apply grid sm:grid-cols-3 gap-y-12;
   @apply place-items-stretch;
-  @apply text-xl text-center;
+  @apply text-base md:text-xl text-center;
 }
 
 .item {

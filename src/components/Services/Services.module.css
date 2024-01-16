@@ -34,7 +34,7 @@
 
 .head .text {
   @apply w-full max-w-3xl mx-auto;
-  @apply text-xl text-center;
+  @apply text-lg md:text-xl text-center;
 }
 
 .body {

@@ -57,5 +57,5 @@
 
 .body .text {
   @apply w-full max-w-xl mb-6;
-  @apply font-sans text-xl text-justify;
+  @apply font-sans text-lg md:text-xl;
 }
