@@ -33,8 +33,8 @@ export default function App({ Component, pageProps }: AppProps) {
     <Fragment>
       <Head>
         <title>
-          BONDY BUILDER, sublimez votre intérieur avec une touche d'artisanat
-          unique
+          BONDY BUILDER, sublimez votre intérieur avec une touche
+          d&apos;artisanat unique
         </title>
         <meta
           name="description"
