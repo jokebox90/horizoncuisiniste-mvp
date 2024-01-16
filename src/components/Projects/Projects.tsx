@@ -78,7 +78,13 @@ export default function Projects() {
             variants={variants}
             className={styles.image}
           >
-            <Image src={designPNG} alt="Design 2" width={1280} height={960} />
+            <Image
+              src={designPNG}
+              alt="Design 2"
+              width={1280}
+              height={960}
+              priority
+            />
           </motion.div>
         </div>
 
@@ -89,7 +95,13 @@ export default function Projects() {
               animate={isInView2 ? "slideInDownEarly" : "slideInDownInitial"}
               variants={variants}
             >
-              <Image src={design1PNG} alt="Design 1" width={320} height={240} />
+              <Image
+                src={design1PNG}
+                alt="Design 1"
+                width={320}
+                height={240}
+                priority
+              />
             </motion.div>
           </div>
 

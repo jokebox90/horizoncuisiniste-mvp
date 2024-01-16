@@ -25,7 +25,13 @@ export default function About() {
             variants={variants}
             className={styles.image}
           >
-            <Image src={parisJPG} alt="Paris" width={1024} height={768} />
+            <Image
+              src={parisJPG}
+              alt="Paris"
+              width={1024}
+              height={768}
+              priority
+            />
           </motion.div>
         </div>
 
@@ -36,7 +42,13 @@ export default function About() {
             variants={variants}
             className={styles.image}
           >
-            <Image src={designPNG} alt="Design 2" width={320} height={240} />
+            <Image
+              src={designPNG}
+              alt="Design 2"
+              width={320}
+              height={240}
+              priority
+            />
           </motion.div>
 
           <motion.div

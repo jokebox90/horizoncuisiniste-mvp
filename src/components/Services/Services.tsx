@@ -119,7 +119,13 @@ export default function Services() {
           variants={variants}
           className={styles.image}
         >
-          <Image src={design2PNG} alt="Design 2" width={320} height={240} />
+          <Image
+            src={design2PNG}
+            alt="Design 2"
+            width={320}
+            height={240}
+            priority
+          />
         </motion.div>
 
         <motion.div
@@ -142,7 +148,7 @@ export default function Services() {
 
       <div ref={ref2} className={styles.body}>
         <div className={styles.image}>
-            <Image src={salonJPG} alt="Logo" width={1280} height={960} />
+          <Image src={salonJPG} alt="Logo" width={1280} height={960} priority />
           <div className="absolute top-0 left-0 w-full h-full bg-zinc-50 opacity-50"></div>
         </div>
 
@@ -159,6 +165,7 @@ export default function Services() {
                 alt="Design 1"
                 width={320}
                 height={240}
+                priority
                 className="w-auto h-24"
               />
             </motion.div>
@@ -193,6 +200,7 @@ export default function Services() {
                   alt={item.title}
                   width={320}
                   height={240}
+                  priority
                 />
               </motion.div>
             </div>

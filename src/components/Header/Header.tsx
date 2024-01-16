@@ -31,7 +31,7 @@ export default function Header() {
           variants={variants}
           className={styles.image}
         >
-          <Image src={logoPNG} alt="Logo" width={640} height={480} />
+          <Image src={logoPNG} alt="Logo" width={640} height={480} priority />
         </motion.div>
       </div>
 

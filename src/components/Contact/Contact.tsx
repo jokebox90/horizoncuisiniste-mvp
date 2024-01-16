@@ -28,13 +28,25 @@ export default function Contact() {
       <div className={styles.box}>
         <div className={styles.body}>
           <div className={styles.image}>
-            <Image src={contactJPG} alt="Salon" width={1024} height={768} />
+            <Image
+              src={contactJPG}
+              alt="Salon"
+              width={1024}
+              height={768}
+              priority
+            />
           </div>
         </div>
 
         <div className={styles.head}>
           <div className={styles.image}>
-            <Image src={designPNG} alt="Design 2" width={1280} height={960} />
+            <Image
+              src={designPNG}
+              alt="Design 2"
+              width={1280}
+              height={960}
+              priority
+            />
           </div>
 
           <motion.div
