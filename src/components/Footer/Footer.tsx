@@ -13,7 +13,7 @@ export default function Footer() {
             <p>&copy; Auteur</p>
             <div className="w-16 h-1 mt-3 mb-4 mx-auto bg-amber-500 rounded-full"></div>
             <p>
-              <span className="font-semibold">BONDYBUILDER</span>
+              <span className="font-semibold">BONDY BUILDER</span>
             </p>
           </div>
           <div className={styles.item}>

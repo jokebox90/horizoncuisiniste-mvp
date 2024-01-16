@@ -46,7 +46,7 @@ export default function Contact() {
             <ul>
               <li>
                 <FontAwesomeIcon icon={faUserCheck} className={styles.icon} />
-                BONDYBUILDER
+                BONDY BUILDER
               </li>
 
               <li>
