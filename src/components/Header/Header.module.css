@@ -3,16 +3,16 @@
 .component {
   @apply relative;
   @apply w-full h-max min-h-screen;
-  @apply flex flex-col sm:flex-row;
+  @apply flex flex-col lg:flex-row;
   @apply bg-zinc-900 text-zinc-50;
   @apply font-serif text-base;
 }
 .head {
-  @apply w-full max-w-md;
+  @apply w-full lg:max-w-md;
   @apply flex items-center justify-center;
 }
 .head .image {
-  @apply w-80 sm:w-2/3;
+  @apply w-80 lg:w-2/3;
   @apply flex items-center justify-center;
 }
 

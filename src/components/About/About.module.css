@@ -9,12 +9,12 @@
 
 .box {
   @apply relative w-full;
-  @apply flex flex-col sm:flex-row;
+  @apply flex flex-col lg:flex-row;
 }
 
 .head {
   @apply relative overflow-hidden;
-  @apply w-full max-w-md;
+  @apply w-full lg:max-w-md;
   @apply bg-zinc-50 text-zinc-950;
   @apply flex flex-col sm:flex-row;
 }

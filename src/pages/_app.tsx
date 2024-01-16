@@ -1,12 +1,11 @@
-// src/pages/_app.tsx
+// @/pages/_app.tsx
 
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
-import { Inter, Josefin_Sans, Josefin_Slab, Playball } from "next/font/google";
+import { Josefin_Sans, Josefin_Slab, Playball } from "next/font/google";
 import Head from "next/head";
 import { Fragment } from "react";
 
-const inter = Inter({ subsets: ["latin"] });
 const fontJosefinSans = Josefin_Sans({
   subsets: ["latin-ext"],
   variable: "--font-josefin-sans",
@@ -22,7 +21,6 @@ const fontPlayball = Playball({
 });
 
 const mainClasses = [
-  inter.className,
   fontJosefinSlab.variable,
   fontJosefinSans.variable,
   fontPlayball.variable,

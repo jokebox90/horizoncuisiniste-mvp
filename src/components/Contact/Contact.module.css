@@ -8,13 +8,13 @@
 }
 
 .box {
-  @apply relative w-full flex flex-col sm:flex-row;
+  @apply relative w-full flex flex-col lg:flex-row;
 }
 
 .head {
   @apply relative overflow-hidden;
   @apply w-full px-6 pt-8 pb-4;
-  @apply sm:w-1/2 sm:px-12 sm:pt-32 sm:pb-16;
+  @apply lg:w-1/2 sm:px-12 sm:pt-32 sm:pb-16;
   @apply flex flex-col items-center justify-center;
   @apply bg-zinc-50 text-zinc-950;
 }
