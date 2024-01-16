@@ -111,8 +111,8 @@ export default function Services() {
     },
   ];
   return (
-    <article ref={ref} className={styles.component}>
-      <div className={styles.head}>
+    <article className={styles.component}>
+      <div ref={ref} className={styles.head}>
         <motion.div
           initial="revealInitial"
           animate={isInView ? "reveal" : "revealInitial"}
