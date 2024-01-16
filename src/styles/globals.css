@@ -5,6 +5,7 @@
 :root {
   @apply bg-zinc-50;
   @apply font-sans text-base;
+  @apply scroll-smooth;
 }
 
 body {
