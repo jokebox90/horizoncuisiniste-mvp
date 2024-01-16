@@ -22,7 +22,7 @@ export default function About() {
 
           <h2 className={styles.title}>Qui sommes-nous ?</h2>
           <p className={styles.text}>
-            Situés au cœur de la dynamique ville, nous sommes fiers de porter le
+            Situés au cœur de la dynamique de la ville, nous sommes fiers de porter le
             nom de &apos;BONDY&apos; comme une marque. Bondy est une collectivité engagée
             avec vitalité et énergie dans un mode de vie basé sur le bien-être
             et le progrès. Notre philosophie s&apos;inspire de sa solidité, de sa
