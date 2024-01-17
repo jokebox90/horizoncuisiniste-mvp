@@ -5,6 +5,7 @@ import type { AppProps } from "next/app";
 import { Josefin_Sans, Josefin_Slab, Playball } from "next/font/google";
 import Head from "next/head";
 import { Fragment } from "react";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 const fontJosefinSans = Josefin_Sans({
   subsets: ["latin-ext"],
@@ -43,6 +44,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <main id="main" className={mainClasses}>
         <Component {...pageProps} />
       </main>
+      <GoogleTagManager gtmId="G-M5CQMKJ2SC" />
     </Fragment>
   );
 }
