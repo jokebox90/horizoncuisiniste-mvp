@@ -12,8 +12,41 @@ import designPNG from "@/static/img/logo-2.png";
 import salleDeBainJPG from "@/static/img/salle-de-bain.jpg";
 import salonJPG from "@/static/img/salon.jpg";
 import { motion, useInView } from "framer-motion";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { useRef } from "react";
+
+interface OverviewProps {
+  data: {
+    title: string;
+    image: StaticImageData;
+  };
+}
+
+function Overview({ data }: OverviewProps) {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref);
+
+  return (
+    <div ref={ref} className={styles.card}>
+      <motion.div
+        initial="revealInitial"
+        animate={isInView ? "reveal" : "revealInitial"}
+        variants={variants}
+        className={styles.image}
+      >
+        <Image src={data.image} alt="Salon" width={1280} height={960} />
+      </motion.div>
+
+      <motion.div
+        initial="slideInRightInitial"
+        animate={isInView ? "slideInRight" : "slideInRightInitial"}
+        variants={variants}
+      >
+        <h3 className={styles.title}>{data.title}</h3>
+      </motion.div>
+    </div>
+  );
+}
 
 export default function Projects() {
   const ref = useRef<HTMLDivElement>(null);
@@ -108,29 +141,7 @@ export default function Projects() {
           <div ref={ref2} className={styles.content}>
             <div className={styles.cards}>
               {espaces.map((item, index) => (
-                <div key={index} className={styles.card}>
-                  <motion.div
-                    initial="revealInitial"
-                    animate={isInView2 ? "reveal" : "revealInitial"}
-                    variants={variants}
-                    className={styles.image}
-                  >
-                    <Image
-                      src={item.image}
-                      alt="Salon"
-                      width={1280}
-                      height={960}
-                    />
-                  </motion.div>
-
-                  <motion.div
-                    initial="slideInRightInitial"
-                    animate={isInView2 ? "slideInRight" : "slideInRightInitial"}
-                    variants={variants}
-                  >
-                    <h3 className={styles.title}>{item.title}</h3>
-                  </motion.div>
-                </div>
+                <Overview key={index} data={item} />
               ))}
             </div>
 

@@ -18,7 +18,7 @@
 
 .head .image img {
   @apply w-full h-auto;
-  @apply sm:bg-zinc-800 rounded-full;
+  @apply lg:bg-zinc-800 rounded-full;
 }
 
 .body {

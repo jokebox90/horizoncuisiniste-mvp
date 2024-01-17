@@ -13,11 +13,59 @@ import peinturesJPG from "@/static/img/peintures.jpg";
 import plomberieJPG from "@/static/img/plomberie.jpg";
 import revetementsJPG from "@/static/img/revetements.jpg";
 import salonJPG from "@/static/img/salon.jpg";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { motion, useInView } from "framer-motion";
 import { variants } from "../Animate/Animate.variants";
 import { useRef } from "react";
 import Button from "../Button/Button";
+
+interface CardProps {
+  data: {
+    title: string;
+    image: StaticImageData;
+    items: Array<string>;
+  };
+}
+
+function Card({ data }: CardProps) {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref);
+
+  return (
+    <div ref={ref} className={styles.card}>
+      <div className={styles.content}>
+        <motion.div
+          initial="slideInRightInitial"
+          animate={isInView ? "slideInRight" : "slideInRightInitial"}
+          variants={variants}
+        >
+          <h3 className={styles.title}>{data.title}</h3>
+          <ul className={styles.list}>
+            {data.items.map((val, index) => (
+              <li key={index} className={styles.text}>
+                {val}
+              </li>
+            ))}
+          </ul>
+        </motion.div>
+      </div>
+      <motion.div
+        initial="revealInitial"
+        animate={isInView ? "reveal" : "revealInitial"}
+        variants={variants}
+        className={styles.image}
+      >
+        <Image
+          src={data.image}
+          alt={data.title}
+          width={320}
+          height={240}
+          priority
+        />
+      </motion.div>
+    </div>
+  );
+}
 
 export default function Services() {
   const ref = useRef<HTMLDivElement>(null);
@@ -152,11 +200,11 @@ export default function Services() {
           <div className="absolute top-0 left-0 w-full h-full bg-zinc-50 opacity-50"></div>
         </div>
 
-        <div ref={ref3} className={styles.cards}>
-          <div className="col-span-full mb-8 flex justify-center">
+        <div className={styles.cards}>
+          <div ref={ref3} className="col-span-full mb-8 flex justify-center">
             <motion.div
               initial="slideInDownInitial"
-              animate={isInView2 ? "slideInDownEarly" : "slideInDownInitial"}
+              animate={isInView3 ? "slideInDownEarly" : "slideInDownInitial"}
               variants={variants}
               className="w-auto h-24"
             >
@@ -172,38 +220,7 @@ export default function Services() {
           </div>
 
           {services.map((item, index) => (
-            <div key={index} className={styles.card}>
-              <div className={styles.content}>
-                <motion.div
-                  initial="slideInRightInitial"
-                  animate={isInView2 ? "slideInRight" : "slideInRightInitial"}
-                  variants={variants}
-                >
-                  <h3 className={styles.title}>{item.title}</h3>
-                  <ul className={styles.list}>
-                    {item.items.map((val, index) => (
-                      <li key={index} className={styles.text}>
-                        {val}
-                      </li>
-                    ))}
-                  </ul>
-                </motion.div>
-              </div>
-              <motion.div
-                initial="revealInitial"
-                animate={isInView2 ? "reveal" : "revealInitial"}
-                variants={variants}
-                className={styles.image}
-              >
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  width={320}
-                  height={240}
-                  priority
-                />
-              </motion.div>
-            </div>
+            <Card key={index} data={item} />
           ))}
 
           <div ref={ref4} className="col-span-full overflow-hidden">
