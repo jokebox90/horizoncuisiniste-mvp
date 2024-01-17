@@ -31,7 +31,7 @@
 }
 
 .head .title {
-  @apply w-full max-w-xl mx-auto mb-8;
+  @apply w-full max-w-xl mb-8;
   @apply font-sans text-3xl sm:text-5xl;
 }
 
@@ -55,9 +55,16 @@
 }
 
 .head .list .icon {
-  @apply w-5 h-5;
-  @apply sm:w-8 sm:h-8;
-  @apply text-amber-600;
+  @apply w-10 h-10;
+  @apply sm:w-16 sm:h-16;
+  @apply flex items-center justify-center;
+  @apply bg-amber-500 rounded-full;
+}
+
+.head .list .icon svg {
+  @apply w-4 h-4;
+  @apply sm:w-7 sm:h-7;
+  @apply text-amber-50;
 }
 
 .head .buttons {
