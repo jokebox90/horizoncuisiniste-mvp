@@ -37,6 +37,16 @@ export const variants: Variants = {
       bounce: 0.25,
     },
   },
+  slideInRightLater: {
+    x: "0%",
+    opacity: 1,
+    transition: {
+      delay: 3,
+      duration: 1,
+      type: "spring",
+      bounce: 0.25,
+    },
+  },
   slideInDownInitial: {
     opacity: 0,
     y: "-300%",

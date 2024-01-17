@@ -20,9 +20,11 @@ export default function Contact() {
   const ref = useRef<HTMLDivElement>(null);
   const ref2 = useRef<HTMLDivElement>(null);
   const ref3 = useRef<HTMLDivElement>(null);
+  const ref4 = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref);
   const isInView2 = useInView(ref2);
   const isInView3 = useInView(ref3);
+  const isInView4 = useInView(ref4);
   return (
     <article ref={ref} className={styles.component}>
       <div className={styles.box}>
@@ -49,29 +51,31 @@ export default function Contact() {
             />
           </div>
 
-          <motion.div
-            initial="slideInRightInitial"
-            animate={isInView ? "slideInRightEarly" : "slideInRightInitial"}
-            variants={variants}
-          >
-            <h2 className={styles.title}>Contactez-nous</h2>
+          <div ref={ref4} className="w-full">
+            <motion.div
+              initial="slideInRightInitial"
+              animate={isInView4 ? "slideInRightEarly" : "slideInRightInitial"}
+              variants={variants}
+            >
+              <h2 className={styles.title}>Contactez-nous</h2>
 
-            <p className={styles.text}>
-              Les défis de l&apos;aménagement intérieur et des rénovations vous
-              ont poussé à trouver une expertise fiable.
-            </p>
+              <p className={styles.text}>
+                Les défis de l&apos;aménagement intérieur et des rénovations
+                vous ont poussé à trouver une expertise fiable.
+              </p>
 
-            <p className={styles.text}>
-              Sans une intervention adaptée, le cumul des problèmes peut nuire à
-              l&apos;esthétique et au fonctionnement de votre environnement.
-            </p>
+              <p className={styles.text}>
+                Sans une intervention adaptée, le cumul des problèmes peut nuire
+                à l&apos;esthétique et au fonctionnement de votre environnement.
+              </p>
 
-            <p className={styles.text}>
-              Nous vous remercions de nous avoir choisis pour transformer ces
-              défis en solutions créatives et performantes, en harmonie avec vos
-              attentes décoratives.
-            </p>
-          </motion.div>
+              <p className={styles.text}>
+                Nous vous remercions de nous avoir choisis pour transformer ces
+                défis en solutions créatives et performantes, en harmonie avec
+                vos attentes décoratives.
+              </p>
+            </motion.div>
+          </div>
 
           <div ref={ref2} className={styles.list}>
             <motion.div
