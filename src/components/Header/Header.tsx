@@ -35,12 +35,7 @@ export default function Header() {
         </motion.div>
       </div>
 
-      <div className={styles.body}>
-        <div
-          ref={ref}
-          className="absolute bottom-16 left-0 w-full h-0 max-h-0"
-        ></div>
-
+      <div ref={ref} className={styles.body}>
         <motion.div
           initial="revealInitial"
           animate={animate ? "reveal" : "revealInitial"}
