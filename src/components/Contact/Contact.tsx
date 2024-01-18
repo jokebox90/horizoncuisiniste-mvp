@@ -7,15 +7,15 @@ import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCity,
+  faEnvelope,
   faMobilePhone,
   faRoad,
   faUserCheck,
 } from "@fortawesome/free-solid-svg-icons";
 import { motion, useInView } from "framer-motion";
 import { variants } from "@/components/Animate/Animate.variants";
-import Button from "@/components/Button/Button";
 import { useRef } from "react";
-import { CalendlyPopUpToggleButton } from "../Calendly/Calendly";
+import { CalendlyPopUpToggleButton } from "@/components/Calendly/Calendly";
 
 export default function Contact() {
   const ref = useRef<HTMLDivElement>(null);
@@ -93,24 +93,31 @@ export default function Contact() {
                 </li>
 
                 <li>
+                  <div>
+                    <FontAwesomeIcon icon={faEnvelope} />
+                  </div>
+                  bondybuilder93@gmail.com
+                </li>
+
+                {/* <li>
                   <div className={styles.icon}>
                     <FontAwesomeIcon icon={faMobilePhone} />
                   </div>
                   01 23 45 67 89
-                </li>
+                </li> */}
 
-                <li>
+                {/* <li>
                   <div className={styles.icon}>
                     <FontAwesomeIcon icon={faRoad} />
                   </div>
                   123, rue du Paradis
-                </li>
+                </li> */}
 
                 <li>
                   <div className={styles.icon}>
                     <FontAwesomeIcon icon={faCity} />
                   </div>
-                  54321, Saint-Tillant
+                  93140, Bondy
                 </li>
               </ul>
             </motion.div>
