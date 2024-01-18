@@ -29,7 +29,7 @@ export default function Footer() {
               <Link
                 href={`https://www.facebook.com/profile.php?id=61555889212804`}
                 target="_blank"
-                className="w-8 h-8 text-blue-600 hover:scale-105 active:scale-95"
+                className="w-8 h-8 text-blue-600 hover:scale-125 active:scale-90 transition-all duration-300"
               >
                 <FontAwesomeIcon icon={faFacebook} />
               </Link>
@@ -53,9 +53,13 @@ export default function Footer() {
           <div className={styles.item}>
             <p>Propulsé par</p>
             <div className="w-16 h-1 mt-3 mb-4 mx-auto bg-amber-500 rounded-full"></div>
-            <p>
+            <Link
+              href={`https://www.petitboutde.cloud`}
+              target="_blank"
+              className="hover:text-zinc-300 hover:scale-125 active:scale-95 transition-all duration-300"
+            >
               <span className="font-semibold">PETITBOUTDECLOUD</span>
-            </p>
+            </Link>
           </div>
         </div>
       </div>
