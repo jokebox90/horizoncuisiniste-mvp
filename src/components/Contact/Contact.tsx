@@ -93,7 +93,7 @@ export default function Contact() {
                 </li>
 
                 <li>
-                  <div>
+                  <div className={styles.icon}>
                     <FontAwesomeIcon icon={faEnvelope} />
                   </div>
                   bondybuilder93@gmail.com
