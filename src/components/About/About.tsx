@@ -8,6 +8,7 @@ import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
 import { variants } from "../Animate/Animate.variants";
+import { CalendlyPopUpToggleButton } from "../Calendly/Calendly";
 
 export default function About() {
   const ref = useRef<HTMLDivElement>(null);
@@ -83,11 +84,11 @@ export default function About() {
               animate={isInView2 ? "slideInDownEarly" : "slideInDownInitial"}
               variants={variants}
             >
-              <Button>
+              <CalendlyPopUpToggleButton>
                 Obtenir un devis dès
                 <br />
                 maintenant !
-              </Button>
+              </CalendlyPopUpToggleButton>
             </motion.div>
           </div>
         </div>

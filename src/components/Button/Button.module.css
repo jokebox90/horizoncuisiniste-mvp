@@ -6,4 +6,6 @@
   @apply font-sans font-semibold text-amber-50;
   @apply text-center text-lg sm:text-2xl leading-tight;
   @apply rounded-xl shadow-2xl border-2 border-amber-500;
+  @apply hover:scale-105 active:scale-95;
+  @apply transition-all duration-300;
 }

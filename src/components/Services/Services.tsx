@@ -18,6 +18,7 @@ import { motion, useInView } from "framer-motion";
 import { variants } from "../Animate/Animate.variants";
 import { useRef } from "react";
 import Button from "../Button/Button";
+import { CalendlyPopUpToggleButton } from "../Calendly/Calendly";
 
 interface CardProps {
   data: {
@@ -230,11 +231,11 @@ export default function Services() {
               variants={variants}
               className="w-full pt-16 flex items-center justify-center"
             >
-              <Button>
+              <CalendlyPopUpToggleButton>
                 Obtenir un devis dès
                 <br />
                 maintenant !
-              </Button>
+              </CalendlyPopUpToggleButton>
             </motion.div>
           </div>
         </div>

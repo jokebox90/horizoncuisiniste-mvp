@@ -1,6 +1,5 @@
 // src/components/Header/Header.tsx
 
-import Button from "@/components/Button/Button";
 import styles from "@/components/Header/Header.module.css";
 import logoPNG from "@/static/img/logo.png";
 import salonJPG from "@/static/img/salon.jpg";
@@ -8,6 +7,7 @@ import { Variants, motion, useInView } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { variants } from "../Animate/Animate.variants";
+import { CalendlyPopUpToggleButton } from "../Calendly/Calendly";
 
 export default function Header() {
   const ref = useRef<HTMLDivElement>(null);
@@ -70,17 +70,11 @@ export default function Header() {
             animate={animate ? "slideInDownEarly" : "slideInDownInitial"}
             variants={variants}
           >
-            <Button>
-              <motion.span
-                initial="slideInRightInitial"
-                animate={animate ? "slideInRight" : "slideInRightInitial"}
-                variants={variants}
-              >
+            <CalendlyPopUpToggleButton>
                 Obtenir un devis dès
                 <br />
                 maintenant !
-              </motion.span>
-            </Button>
+            </CalendlyPopUpToggleButton>
           </motion.div>
         </div>
       </div>

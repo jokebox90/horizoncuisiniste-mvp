@@ -15,6 +15,7 @@ import { motion, useInView } from "framer-motion";
 import { variants } from "@/components/Animate/Animate.variants";
 import Button from "@/components/Button/Button";
 import { useRef } from "react";
+import { CalendlyPopUpToggleButton } from "../Calendly/Calendly";
 
 export default function Contact() {
   const ref = useRef<HTMLDivElement>(null);
@@ -122,11 +123,11 @@ export default function Contact() {
               variants={variants}
               className={styles.buttons}
             >
-              <Button>
+              <CalendlyPopUpToggleButton>
                 Obtenir un devis dès
                 <br />
                 maintenant !
-              </Button>
+              </CalendlyPopUpToggleButton>
             </motion.div>
           </div>
         </div>

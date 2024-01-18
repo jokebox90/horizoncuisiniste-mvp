@@ -14,6 +14,7 @@ import salonJPG from "@/static/img/salon.jpg";
 import { motion, useInView } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 import { useRef } from "react";
+import { CalendlyPopUpToggleButton } from "../Calendly/Calendly";
 
 interface OverviewProps {
   data: {
@@ -152,11 +153,11 @@ export default function Projects() {
                 variants={variants}
                 className="w-full pt-16 pb-16 flex items-center justify-center"
               >
-                <Button>
+                <CalendlyPopUpToggleButton>
                   Obtenir un devis dès
                   <br />
                   maintenant !
-                </Button>
+                </CalendlyPopUpToggleButton>
               </motion.div>
             </div>
           </div>
