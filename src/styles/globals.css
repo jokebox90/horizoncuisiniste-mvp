@@ -22,3 +22,10 @@ body {
   @apply w-screen h-full min-h-screen;
   @apply overflow-x-hidden overflow-y-auto;
 }
+
+.calendly-popup-content {
+  @apply py-6;
+  @apply rounded-3xl shadow-2xl;
+  @apply border border-amber-700;
+  @apply bg-gradient-to-bl from-amber-500 to-amber-700;
+}
