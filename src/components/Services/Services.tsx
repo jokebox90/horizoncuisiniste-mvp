@@ -82,7 +82,7 @@ export default function Services() {
       title: "Électricité",
       image: electriciteJPG,
       items: [
-        "Installation des tableaux électrique",
+        "Installation de tableau électrique",
         "Création et maintenance des réseaux",
         "Installation des prises, commandes et luminaires",
       ],
@@ -92,7 +92,7 @@ export default function Services() {
       image: revetementsJPG,
       items: [
         "Pose des tapisseries et moquettes",
-        "Pose des carrelages et parquets",
+        "Pose de carrelage et parquets",
         "Pose des plinthes et installation des placards",
       ],
     },

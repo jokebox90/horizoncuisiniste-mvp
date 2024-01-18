@@ -69,7 +69,7 @@ export default function About() {
             </p>
             <p className={styles.text}>
               Le terme &apos;BUILDER&apos;, associé à notre nom, représente
-              notre conscience détails et notre passion pour des architectures
+              notre conscience des détails et notre passion pour des architectures
               raffinées. Chaque espace que nous concevons est le fruit
               d&apos;une quête harmonieuse d&apos;excellence. Ils reflétant
               notre promesse de créer des intérieurs où chaque élément est en

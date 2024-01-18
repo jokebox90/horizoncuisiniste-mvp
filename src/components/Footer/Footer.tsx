@@ -33,11 +33,13 @@ export default function Footer() {
               >
                 <FontAwesomeIcon icon={faFacebook} />
               </Link>
-              <FontAwesomeIcon
-                icon={faInstagram}
-                // className="w-8 h-8 text-pink-600"
-                className="w-8 h-8 text-zinc-500"
-              />
+              <Link
+                href={`https://www.instagram.com/bondybuilder93/`}
+                target="_blank"
+                className="w-8 h-8 text-pink-600 hover:scale-125 active:scale-90 transition-all duration-300"
+              >
+                <FontAwesomeIcon icon={faInstagram} />
+              </Link>
               <FontAwesomeIcon
                 icon={faLinkedin}
                 // className="w-8 h-8 text-cyan-600"
