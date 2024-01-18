@@ -7,10 +7,7 @@ import {
   MouseEventHandler,
   useRef,
 } from "react";
-import Button from "../Button/Button";
-import { motion, useInView } from "framer-motion";
-import { variants } from "../Animate/Animate.variants";
-motion;
+import Button from "@/components/Button/Button";
 
 interface CalendlyPopUpContextType {
   isCalendlyPopUpOpen: boolean;

@@ -1,14 +1,13 @@
 // src/components/About/About.tsx
 
 import styles from "@/components/About/About.module.css";
-import Button from "@/components/Button/Button";
 import designPNG from "@/static/img/logo-2.png";
 import parisJPG from "@/static/img/paris.jpg";
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
-import { variants } from "../Animate/Animate.variants";
-import { CalendlyPopUpToggleButton } from "../Calendly/Calendly";
+import { variants } from "@/components/Animate/Animate.variants";
+import { CalendlyPopUpToggleButton } from "@/components/Calendly/Calendly";
 
 export default function About() {
   const ref = useRef<HTMLDivElement>(null);

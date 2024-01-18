@@ -6,8 +6,8 @@ import salonJPG from "@/static/img/salon.jpg";
 import { Variants, motion, useInView } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import { variants } from "../Animate/Animate.variants";
-import { CalendlyPopUpToggleButton } from "../Calendly/Calendly";
+import { variants } from "@/components/Animate/Animate.variants";
+import { CalendlyPopUpToggleButton } from "@/components/Calendly/Calendly";
 
 export default function Header() {
   const ref = useRef<HTMLDivElement>(null);

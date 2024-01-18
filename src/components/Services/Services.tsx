@@ -15,10 +15,9 @@ import revetementsJPG from "@/static/img/revetements.jpg";
 import salonJPG from "@/static/img/salon.jpg";
 import Image, { StaticImageData } from "next/image";
 import { motion, useInView } from "framer-motion";
-import { variants } from "../Animate/Animate.variants";
+import { variants } from "@/components/Animate/Animate.variants";
 import { useRef } from "react";
-import Button from "../Button/Button";
-import { CalendlyPopUpToggleButton } from "../Calendly/Calendly";
+import { CalendlyPopUpToggleButton } from "@/components/Calendly/Calendly";
 
 interface CardProps {
   data: {

@@ -6,8 +6,6 @@ import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import Projects from "@/components/Projects/Projects";
 import Services from "@/components/Services/Services";
-import Team from "@/components/Team/Team";
-import Image from "next/image";
 import { Fragment } from "react";
 
 export default function Home() {

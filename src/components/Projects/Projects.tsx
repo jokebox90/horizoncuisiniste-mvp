@@ -1,7 +1,6 @@
 // src/components/Projects/Projects.tsx
 
 import { variants } from "@/components/Animate/Animate.variants";
-import Button from "@/components/Button/Button";
 import styles from "@/components/Projects/Projects.module.css";
 import chambreJPG from "@/static/img/chambre.jpg";
 import cuisineJPG from "@/static/img/cuisine.jpg";
@@ -14,7 +13,7 @@ import salonJPG from "@/static/img/salon.jpg";
 import { motion, useInView } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 import { useRef } from "react";
-import { CalendlyPopUpToggleButton } from "../Calendly/Calendly";
+import { CalendlyPopUpToggleButton } from "@/components/Calendly/Calendly";
 
 interface OverviewProps {
   data: {
