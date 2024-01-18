@@ -57,7 +57,11 @@ export function CalendlyPopUpToggleButton({
 
   return (
     <Button
-      onClick={isCalendlyPopUpOpen ? closeCalendlyPopUp : openCalendlyPopUp}
+      onClick={
+        (isCalendlyPopUpOpen
+          ? closeCalendlyPopUp
+          : openCalendlyPopUp) as MouseEventHandler
+      }
     >
       {children}
     </Button>
