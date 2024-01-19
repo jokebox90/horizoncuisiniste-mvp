@@ -15,7 +15,7 @@ import {
 import { motion, useInView } from "framer-motion";
 import { variants } from "@/components/Animate/Animate.variants";
 import { useRef } from "react";
-import { CalendlyPopUpToggleButton } from "@/components/Calendly/Calendly";
+import CallToAction from "../Button/CallToAction";
 
 export default function Contact() {
   const ref = useRef<HTMLDivElement>(null);
@@ -27,7 +27,7 @@ export default function Contact() {
   const isInView3 = useInView(ref3);
   const isInView4 = useInView(ref4);
   return (
-    <article ref={ref} className={styles.component}>
+    <article id="contact" ref={ref} className={styles.component}>
       <div className={styles.box}>
         <div className={styles.body}>
           <div className={styles.image}>
@@ -58,7 +58,7 @@ export default function Contact() {
               animate={isInView4 ? "slideInRightEarly" : "slideInRightInitial"}
               variants={variants}
             >
-              <h2 className={styles.title}>Contactez-nous</h2>
+              <h2 className={styles.title}>Comment nous contacter ?</h2>
 
               <p className={styles.text}>
                 Les défis de l&apos;aménagement intérieur et des rénovations
@@ -89,7 +89,7 @@ export default function Contact() {
                   <div className={styles.icon}>
                     <FontAwesomeIcon icon={faUserCheck} />
                   </div>
-                  BONDY BUILDER
+                  Bondy Builder
                 </li>
 
                 <li>
@@ -123,19 +123,8 @@ export default function Contact() {
             </motion.div>
           </div>
 
-          <div ref={ref3} className="w-full overflow-hidden">
-            <motion.div
-              initial="slideInDownInitial"
-              animate={isInView3 ? "slideInDownEarly" : "slideInDownInitial"}
-              variants={variants}
-              className={styles.buttons}
-            >
-              <CalendlyPopUpToggleButton>
-                Obtenir un devis dès
-                <br />
-                maintenant !
-              </CalendlyPopUpToggleButton>
-            </motion.div>
+          <div className="w-full inline-flex">
+            <CallToAction />
           </div>
         </div>
       </div>

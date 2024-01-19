@@ -7,7 +7,7 @@ import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
 import { variants } from "@/components/Animate/Animate.variants";
-import { CalendlyPopUpToggleButton } from "@/components/Calendly/Calendly";
+import CallToAction from "@/components/Button/CallToAction";
 
 export default function About() {
   const ref = useRef<HTMLDivElement>(null);
@@ -16,7 +16,7 @@ export default function About() {
   const isInView2 = useInView(ref2);
 
   return (
-    <article ref={ref} className={styles.component}>
+    <article id="about" ref={ref} className={styles.component}>
       <div className={styles.box}>
         <div className={styles.head}>
           <motion.div
@@ -69,26 +69,16 @@ export default function About() {
             </p>
             <p className={styles.text}>
               Le terme &apos;BUILDER&apos;, associé à notre nom, représente
-              notre conscience des détails et notre passion pour des architectures
-              raffinées. Chaque espace que nous concevons est le fruit
-              d&apos;une quête harmonieuse d&apos;excellence. Ils reflétant
-              notre promesse de créer des intérieurs où chaque élément est en
-              parfaite symbiose avec le confort qui fait votre fierté.
+              notre conscience des détails et notre passion pour des
+              architectures raffinées. Chaque espace que nous concevons est le
+              fruit d&apos;une quête harmonieuse d&apos;excellence. Ils
+              reflétant notre promesse de créer des intérieurs où chaque élément
+              est en parfaite symbiose avec le confort qui fait votre fierté.
             </p>
           </motion.div>
 
-          <div ref={ref2} className={styles.buttons}>
-            <motion.div
-              initial="slideInDownInitial"
-              animate={isInView2 ? "slideInDownEarly" : "slideInDownInitial"}
-              variants={variants}
-            >
-              <CalendlyPopUpToggleButton>
-                Obtenir un devis dès
-                <br />
-                maintenant !
-              </CalendlyPopUpToggleButton>
-            </motion.div>
+          <div className={styles.buttons}>
+            <CallToAction />
           </div>
         </div>
       </div>

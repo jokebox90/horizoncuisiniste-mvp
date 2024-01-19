@@ -9,8 +9,6 @@ import primaryPNG from "@/static/img/design-1.png";
 import {
   CalendlyPopUp,
   CalendlyPopUpProvider,
-  CalendlyPopUpToggleButton,
-  useCalendlyPopUpContext,
 } from "@/components/Calendly/Calendly";
 
 const fontJosefinSans = Josefin_Sans({

@@ -7,7 +7,7 @@ import { Variants, motion, useInView } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { variants } from "@/components/Animate/Animate.variants";
-import { CalendlyPopUpToggleButton } from "@/components/Calendly/Calendly";
+import CallToAction from "@/components/Button/CallToAction";
 
 export default function Header() {
   const ref = useRef<HTMLDivElement>(null);
@@ -23,7 +23,7 @@ export default function Header() {
   }, [isInView]);
 
   return (
-    <header className={styles.component}>
+    <header id="header" className={styles.component}>
       <div className={styles.head}>
         <motion.div
           initial="slideInDownInitial"
@@ -65,17 +65,7 @@ export default function Header() {
             </p>
           </motion.div>
 
-          <motion.div
-            initial="slideInDownInitial"
-            animate={animate ? "slideInDownEarly" : "slideInDownInitial"}
-            variants={variants}
-          >
-            <CalendlyPopUpToggleButton>
-                Obtenir un devis dès
-                <br />
-                maintenant !
-            </CalendlyPopUpToggleButton>
-          </motion.div>
+          <CallToAction />
         </div>
       </div>
     </header>

@@ -13,7 +13,7 @@ import salonJPG from "@/static/img/salon.jpg";
 import { motion, useInView } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 import { useRef } from "react";
-import { CalendlyPopUpToggleButton } from "@/components/Calendly/Calendly";
+import CallToAction from "@/components/Button/CallToAction";
 
 interface OverviewProps {
   data: {
@@ -84,7 +84,7 @@ export default function Projects() {
   ];
 
   return (
-    <article className={styles.component}>
+    <article id="projects" className={styles.component}>
       <div className={styles.box}>
         <div ref={ref} className={styles.head}>
           <motion.div
@@ -145,20 +145,7 @@ export default function Projects() {
               ))}
             </div>
 
-            <div ref={ref3} className="w-full overflow-hidden">
-              <motion.div
-                initial="slideInDownInitial"
-                animate={isInView3 ? "slideInDownEarly" : "slideInDownInitial"}
-                variants={variants}
-                className="w-full pt-16 pb-16 flex items-center justify-center"
-              >
-                <CalendlyPopUpToggleButton>
-                  Obtenir un devis dès
-                  <br />
-                  maintenant !
-                </CalendlyPopUpToggleButton>
-              </motion.div>
-            </div>
+            <CallToAction />
           </div>
         </div>
       </div>

@@ -17,7 +17,7 @@ import Image, { StaticImageData } from "next/image";
 import { motion, useInView } from "framer-motion";
 import { variants } from "@/components/Animate/Animate.variants";
 import { useRef } from "react";
-import { CalendlyPopUpToggleButton } from "@/components/Calendly/Calendly";
+import CallToAction from "@/components/Button/CallToAction";
 
 interface CardProps {
   data: {
@@ -75,7 +75,6 @@ export default function Services() {
   const isInView = useInView(ref);
   const isInView2 = useInView(ref2);
   const isInView3 = useInView(ref3);
-  const isInView4 = useInView(ref4);
 
   const services = [
     {
@@ -159,7 +158,7 @@ export default function Services() {
     },
   ];
   return (
-    <article className={styles.component}>
+    <article id="services" className={styles.component}>
       <div ref={ref} className={styles.head}>
         <motion.div
           initial="revealInitial"
@@ -194,7 +193,7 @@ export default function Services() {
         </motion.div>
       </div>
 
-      <div ref={ref2} className={styles.body}>
+      <div className={styles.body}>
         <div className={styles.image}>
           <Image src={salonJPG} alt="Logo" width={1280} height={960} priority />
           <div className="absolute top-0 left-0 w-full h-full bg-zinc-50 opacity-50"></div>
@@ -222,22 +221,9 @@ export default function Services() {
           {services.map((item, index) => (
             <Card key={index} data={item} />
           ))}
-
-          <div ref={ref4} className="col-span-full overflow-hidden">
-            <motion.div
-              initial="slideInDownInitial"
-              animate={isInView4 ? "slideInDownEarly" : "slideInDownInitial"}
-              variants={variants}
-              className="w-full pt-16 flex items-center justify-center"
-            >
-              <CalendlyPopUpToggleButton>
-                Obtenir un devis dès
-                <br />
-                maintenant !
-              </CalendlyPopUpToggleButton>
-            </motion.div>
-          </div>
         </div>
+
+        <CallToAction />
       </div>
     </article>
   );
