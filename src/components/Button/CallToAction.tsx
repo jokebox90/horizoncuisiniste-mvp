@@ -10,12 +10,12 @@ export default function CallToAction() {
   const isInView = useInView(ref);
 
   return (
-    <div ref={ref} className="w-full max-w-xs overflow-hidden flex-grow-0">
+    <div ref={ref} className="w-full max-w-xs overflow-y-hidden overflow-x-clip flex-grow-0 pt-16 pb-8">
       <motion.div
         initial="slideInDownInitial"
         animate={isInView ? "slideInDownEarly" : "slideInDownInitial"}
         variants={variants}
-        className="w-full pt-16 flex items-center justify-center"
+        className="w-full flex items-center justify-center"
       >
         <CalendlyPopUpToggleButton>
           Obtenir un devis dès

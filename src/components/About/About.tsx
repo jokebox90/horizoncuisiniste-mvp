@@ -77,9 +77,7 @@ export default function About() {
             </p>
           </motion.div>
 
-          <div className={styles.buttons}>
-            <CallToAction />
-          </div>
+          <CallToAction />
         </div>
       </div>
     </article>

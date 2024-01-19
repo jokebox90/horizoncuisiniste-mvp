@@ -52,7 +52,7 @@ export default function Contact() {
             />
           </div>
 
-          <div ref={ref4} className="w-full">
+          <div ref={ref4} className="relative w-full">
             <motion.div
               initial="slideInRightInitial"
               animate={isInView4 ? "slideInRightEarly" : "slideInRightInitial"}
