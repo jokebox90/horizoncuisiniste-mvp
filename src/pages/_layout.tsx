@@ -1,6 +1,12 @@
 // @/pages/_app.tsx
 
-import { Architects_Daughter, Josefin_Sans, Josefin_Slab, Montserrat_Alternates, Playball } from "next/font/google";
+import {
+  Architects_Daughter,
+  Josefin_Sans,
+  Josefin_Slab,
+  Montserrat_Alternates,
+  Playball,
+} from "next/font/google";
 import Head from "next/head";
 import { Fragment, MouseEventHandler, ReactNode } from "react";
 import { GoogleTagManager } from "@next/third-parties/google";
@@ -10,8 +16,6 @@ import {
   CalendlyPopUp,
   CalendlyPopUpProvider,
 } from "@/components/Calendly/Calendly";
-
-
 
 const fontSans = Montserrat_Alternates({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -49,7 +53,9 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <Fragment>
       <Head>
-        <title>Horizon Cuisiniste, contrétiser vos visions d&apos;intérieur</title>
+        <title>
+          Horizon Cuisiniste, contrétiser vos visions d&apos;intérieur
+        </title>
         <meta
           name="description"
           content="Horizon Cuisiniste, vos experts en rénovation intérieure à Bondy. Spécialisés dans les installations électriques et de plomberie, transformations espaces de vie et l'aménagement avec élégance et confort. Services incluant peinture, pose de revêtements muraux et sols, la maçonnerie et la menuiserie. Faites nous confiance pour des solutions de décoration et de rénovation sur mesure, alliant qualité et attention du détail. Contactez-nous pour redéfinir votre espace avec style et fonctionnalité"
@@ -75,7 +81,9 @@ export default function Layout({ children }: LayoutProps) {
         <MainComponent>{children}</MainComponent>
       </CalendlyPopUpProvider>
 
-      <GoogleTagManager gtmId="G-M5CQMKJ2SC" />
+      <GoogleTagManager
+        gtmId={process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID as string}
+      />
     </Fragment>
   );
 }
