@@ -23,7 +23,7 @@ export default function Header() {
   }, [isInView]);
 
   return (
-    <header id="header" className={styles.component}>
+    <header ref={ref} id="header" className={styles.component}>
       <div className={styles.head}>
         <motion.div
           initial="slideInDownInitial"
@@ -35,7 +35,7 @@ export default function Header() {
         </motion.div>
       </div>
 
-      <div ref={ref} className={styles.body}>
+      <div className={styles.body}>
         <div className={styles.content}>
           <div className={styles.first}>
             <motion.div
