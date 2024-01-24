@@ -3,55 +3,54 @@
 .component {
   @apply w-full min-h-screen sm:min-h-max;
   @apply flex flex-col;
-  @apply bg-zinc-900;
+  @apply bg-dark;
 }
 
 .head {
   @apply relative;
-  @apply w-full h-full;
-  @apply px-6 py-12;
-  @apply sm:pt-32 sm:pb-16;
-  @apply bg-zinc-900;
-  @apply text-zinc-50;
+  @apply px-6 pt-24 pb-12 sm:pt-32;
+  @apply flex items-start justify-center;
+  @apply bg-primary-50 text-zinc-950;
 }
 
 .head .image {
-  @apply static top-0 left-0;
-  @apply w-full h-full;
+  @apply absolute bottom-0 right-0;
+  @apply w-3/5 sm:w-2/5 pt-[100%];
 }
 
 .head .image img {
-  @apply absolute bottom-0 -right-1/4;
-  @apply w-full h-3/4;
-  @apply opacity-15;
-  @apply object-contain object-right-bottom;
+  @apply absolute bottom-0 right-0;
+  @apply w-full h-auto;
+  @apply object-contain object-center;
+  @apply opacity-20 sm:opacity-100;
 }
 
 .head .title {
-  @apply w-full max-w-3xl;
-  @apply mx-auto mb-8 sm:mb-16;
-  @apply text-3xl sm:text-5xl text-center font-sans;
+  @apply w-full sm:w-3/5 sm:px-16;
+  @apply font-sans text-3xl sm:text-5xl mb-8;
+  @apply leading-relaxed;
 }
 
 .head .text {
-  @apply w-full max-w-3xl mx-auto;
-  @apply text-lg md:text-xl text-center font-sans;
+  @apply w-full max-w-3xl sm:w-3/5 sm:px-16;
+  @apply font-sans text-lg md:text-xl;
+  @apply leading-relaxed;
 }
 
 .body {
   @apply relative overflow-hidden flex-1;
-  @apply w-full py-12 pl-4 pr-6;
-  @apply sm:py-24 sm:pl-4 sm:pr-16;
+  @apply w-full p-6 sm:p-12;
   @apply flex flex-col;
   @apply items-center justify-center;
-  @apply bg-zinc-50;
+  @apply bg-primary-50;
 }
 
 .body > .image {
   @apply absolute top-0 left-0;
   @apply overflow-hidden;
+  @apply rounded-3xl;
   @apply w-full h-full;
-  @apply bg-zinc-50;
+  @apply bg-primary-50;
 }
 
 .body > .image img {
@@ -61,41 +60,78 @@
   @apply blur-sm;
 }
 
-.body .cards {
+.body .content {
   @apply relative;
-  @apply w-full max-w-6xl mx-auto;
-  @apply grid sm:grid-cols-2 lg:grid-cols-3;
+  @apply w-full max-w-4xl mx-auto;
+  @apply grid sm:grid-cols-2;
   @apply gap-x-16 gap-y-16;
 }
 
-.body .cards .card {
-  @apply relative flex;
-  @apply bg-zinc-700 rounded-lg;
+.card {
+  @apply relative;
+  @apply flex flex-col;
+  @apply items-stretch justify-stretch;
+  @apply bg-transparent rounded-lg;
   @apply text-zinc-50;
-}
-
-.body .cards .card > .image img {
-  @apply absolute -top-12 -right-4 sm:-right-12;
-  @apply w-24 sm:w-32 h-auto;
+  @apply overflow-hidden;
   @apply rounded-3xl;
 }
 
-.body .cards .card .content {
-  @apply flex-1 py-8 pl-4 pr-2;
-  @apply flex flex-col justify-center;
+.card .overlay {
+  @apply absolute top-0 left-0;
+  @apply w-full h-full;
+  @apply bg-gradient-to-t from-primary-800 to-transparent;
+  /* @apply opacity-75; */
 }
 
-.body .cards .card .content .title {
-  @apply mb-4 mr-16;
-  @apply text-lg text-amber-500;
+.card .content {
+  @apply relative flex-1;
+  @apply w-full h-full;
+  @apply flex flex-col;
+  @apply items-center justify-end;
+}
+
+.card .content > .image {
+  @apply absolute top-0 left-0;
+  @apply w-full h-full;
+}
+
+.card .content > .image img {
+  @apply relative;
+  @apply w-full h-full;
+  @apply object-cover object-right-bottom;
+}
+
+.card .content .motion {
+  @apply relative;
+  @apply flex-1;
+  @apply flex flex-col;
+  @apply items-stretch justify-end;
+}
+
+.card .content .title {
+  @apply relative;
+  @apply pt-[75%] mb-4 px-4 sm:px-12;
+  @apply text-lg text-yellow-400;
   @apply font-sans font-semibold;
+  @apply leading-relaxed;
 }
 
-.body .cards .card .content .list {
+.card .content .list {
+  @apply relative;
   @apply pl-4;
 }
 
-.body .cards .card .content .text {
+.card .content .item {
   @apply list-disc;
-  @apply text-base font-sans;
+  @apply font-sans;
+}
+
+.card .content .text {
+  @apply relative;
+  @apply px-4 pb-8 sm:pb-12 sm:px-12;
+  @apply font-sans text-justify;
+  @apply flex flex-col gap-3;
+  @apply items-stretch justify-end;
+  @apply leading-relaxed;
 }

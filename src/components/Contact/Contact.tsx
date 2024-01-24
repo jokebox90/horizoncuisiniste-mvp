@@ -1,8 +1,8 @@
 // src/components/Contact/Contact.tsx
 
 import styles from "@/components/Contact/Contact.module.css";
-import designPNG from "@/static/img/logo-2.png";
-import contactJPG from "@/static/img/contact.jpg";
+import designPNG from "@/static/img/design-1.png";
+import contactJPG from "@/static/img/cuisine-bg.jpg";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -58,22 +58,18 @@ export default function Contact() {
               animate={isInView4 ? "slideInRightEarly" : "slideInRightInitial"}
               variants={variants}
             >
-              <h2 className={styles.title}>Comment nous contacter ?</h2>
+              <h2 className={styles.title}>
+                Des questions sur votre projet de cuisine ? Comment pouvons-nous
+                vous aider ?
+              </h2>
 
               <p className={styles.text}>
-                Les défis de l&apos;aménagement intérieur et des rénovations
-                vous ont poussé à trouver une expertise fiable.
-              </p>
-
-              <p className={styles.text}>
-                Sans une intervention adaptée, le cumul des problèmes peut nuire
-                à l&apos;esthétique et au fonctionnement de votre environnement.
-              </p>
-
-              <p className={styles.text}>
-                Nous vous remercions de nous avoir choisis pour transformer ces
-                défis en solutions créatives et performantes, en harmonie avec
-                vos attentes décoratives.
+                Vous avez des questions en tête ou êtes prêt à démarrer votre
+                projet de cuisine ? Trouver le bon artisan peut sembler
+                compliqué, mais nous sommes là pour faciliter les choses.
+                Contactez Horizon Cuisiniste à Chennevières et débutons ensemble
+                le voyage vers la cuisine de vos rêves. Notre équipe est à votre
+                écoute pour planifier et concrétiser vos idées.
               </p>
             </motion.div>
           </div>
@@ -89,14 +85,14 @@ export default function Contact() {
                   <div className={styles.icon}>
                     <FontAwesomeIcon icon={faUserCheck} />
                   </div>
-                  Bondy Builder
+                  Horizon Cuisiniste
                 </li>
 
                 <li>
                   <div className={styles.icon}>
                     <FontAwesomeIcon icon={faEnvelope} />
                   </div>
-                  bondybuilder93@gmail.com
+                  horizoncuisiniste93@gmail.com
                 </li>
 
                 {/* <li>

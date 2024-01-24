@@ -3,8 +3,8 @@
 .component {
   @apply relative;
   @apply w-full h-max;
-  @apply bg-zinc-50 text-zinc-950;
-  @apply font-serif text-base;
+  @apply bg-primary-50 text-zinc-950;
+  @apply font-serif;
 }
 
 .box {
@@ -16,17 +16,17 @@
   @apply w-full px-6 pt-8 pb-4;
   @apply lg:w-1/2 sm:px-12 sm:pt-32 sm:pb-16;
   @apply flex flex-col items-center justify-center;
-  @apply bg-zinc-50 text-zinc-950;
+  @apply bg-primary-50 text-zinc-950;
 }
 
 .head .image {
   @apply absolute bottom-0 right-0;
-  @apply w-[175%] h-full;
+  @apply w-full h-full;
 }
 
 .head .image img {
   @apply w-auto h-full;
-  @apply rounded-3xl opacity-15;
+  @apply rounded-3xl opacity-20;
   @apply object-contain object-right-bottom;
 }
 
@@ -51,20 +51,20 @@
 
 .head .list li {
   @apply inline-flex gap-6 items-center;
-  @apply text-base md:text-xl sm:text-3xl font-sans font-bold;
+  @apply md:text-xl sm:text-3xl font-sans font-bold;
 }
 
 .head .list .icon {
   @apply w-10 h-10;
   @apply sm:w-16 sm:h-16;
   @apply flex items-center justify-center;
-  @apply bg-amber-500 rounded-full;
+  @apply bg-secondary-500 rounded-full;
 }
 
 .head .list .icon svg {
   @apply w-4 h-4;
   @apply sm:w-7 sm:h-7;
-  @apply text-amber-50;
+  @apply text-secondary-50;
 }
 
 .head .buttons {
@@ -76,7 +76,7 @@
 .body {
   @apply z-0 relative;
   @apply flex-1;
-  @apply bg-zinc-900;
+  @apply bg-dark;
 }
 
 .body .image {

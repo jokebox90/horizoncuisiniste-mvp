@@ -1,6 +1,6 @@
 // @/pages/_app.tsx
 
-import { Josefin_Sans, Josefin_Slab, Playball } from "next/font/google";
+import { Architects_Daughter, Josefin_Sans, Josefin_Slab, Montserrat_Alternates, Playball } from "next/font/google";
 import Head from "next/head";
 import { Fragment, MouseEventHandler, ReactNode } from "react";
 import { GoogleTagManager } from "@next/third-parties/google";
@@ -11,25 +11,21 @@ import {
   CalendlyPopUpProvider,
 } from "@/components/Calendly/Calendly";
 
-const fontJosefinSans = Josefin_Sans({
-  subsets: ["latin-ext"],
-  variable: "--font-josefin-sans",
-});
-const fontJosefinSlab = Josefin_Slab({
+
+
+const fontSans = Montserrat_Alternates({
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
-  variable: "--font-josefin-slab",
-});
-const fontPlayball = Playball({
-  weight: "400",
-  subsets: [],
-  variable: "--font-playball",
+  variable: "--font-sans",
 });
 
-const mainClasses = [
-  fontJosefinSlab.variable,
-  fontJosefinSans.variable,
-  fontPlayball.variable,
-].join(" ");
+const fontDisplay = Architects_Daughter({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-display",
+});
+
+const mainClasses = [fontSans.variable, fontDisplay.variable].join(" ");
 
 interface MainComponentProps {
   children: ReactNode[] | ReactNode;
@@ -53,10 +49,10 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <Fragment>
       <Head>
-        <title>Bondy Builder, contrétiser vos visions d&apos;intérieur</title>
+        <title>Horizon Cuisiniste, contrétiser vos visions d&apos;intérieur</title>
         <meta
           name="description"
-          content="Bondy Builder, vos experts en rénovation intérieure à Bondy. Spécialisés dans les installations électriques et de plomberie, transformations espaces de vie et l'aménagement avec élégance et confort. Services incluant peinture, pose de revêtements muraux et sols, la maçonnerie et la menuiserie. Faites nous confiance pour des solutions de décoration et de rénovation sur mesure, alliant qualité et attention du détail. Contactez-nous pour redéfinir votre espace avec style et fonctionnalité"
+          content="Horizon Cuisiniste, vos experts en rénovation intérieure à Bondy. Spécialisés dans les installations électriques et de plomberie, transformations espaces de vie et l'aménagement avec élégance et confort. Services incluant peinture, pose de revêtements muraux et sols, la maçonnerie et la menuiserie. Faites nous confiance pour des solutions de décoration et de rénovation sur mesure, alliant qualité et attention du détail. Contactez-nous pour redéfinir votre espace avec style et fonctionnalité"
         />
         <meta
           name="keywords"
@@ -64,12 +60,12 @@ export default function Layout({ children }: LayoutProps) {
         />
         <meta
           name="og:title"
-          content="Bondy Builder, sublimez votre intérieur avec une touche
+          content="Horizon Cuisiniste, sublimez votre intérieur avec une touche
           d'artisanat unique"
         />
         <meta
           name="og:description"
-          content="Bondy Builder, vos experts en rénovation intérieure à Bondy. Spécialisés dans les installations électriques et de plomberie, transformations espaces de vie et l'aménagement avec élégance et confort. Services incluant peinture, pose de revêtements muraux et sols, la maçonnerie et la menuiserie."
+          content="Horizon Cuisiniste, vos experts en rénovation intérieure à Bondy. Spécialisés dans les installations électriques et de plomberie, transformations espaces de vie et l'aménagement avec élégance et confort. Services incluant peinture, pose de revêtements muraux et sols, la maçonnerie et la menuiserie."
         />
         <meta name="og:image" content={logoPNG.src} />
         <link rel="icon" type="image/x-icon" href={primaryPNG.src} />

@@ -1,0 +1,76 @@
+/* @/components/Header/Header.module.css */
+
+.component {
+  @apply relative;
+  @apply w-full h-full mx-auto;
+  @apply flex;
+  @apply text-zinc-950;
+  @apply font-serif;
+}
+
+.content {
+  @apply w-max h-full mx-auto;
+  @apply flex flex-col sm:flex-row;
+  @apply gap-8 sm:gap-2;
+  @apply items-center justify-center;
+}
+
+.start {
+  @apply w-auto h-full px-6;
+  @apply flex flex-row;
+  @apply items-center justify-center;
+  @apply bg-transparent rounded;
+}
+
+.image {
+  @apply relative;
+  @apply w-full pt-[100%];
+}
+
+.image img {
+  @apply absolute top-0 left-0;
+  @apply w-auto h-full;
+  @apply flex flex-row;
+  @apply items-center justify-center;
+  @apply rounded-xl sm:rounded-3xl;
+  @apply object-cover object-center;
+}
+
+.listIcon {
+  @apply relative;
+  @apply w-64 h-64 p-20;
+  @apply sm:w-32 sm:h-32 sm:p-10;
+  @apply rounded-full;
+  @apply bg-primary-400;
+}
+
+.listIcon svg {
+  @apply w-full h-full;
+  @apply text-zinc-50;
+}
+
+.end {
+  @apply flex-1 relative w-full flex;
+  @apply bg-primary-500 text-zinc-50 rounded-lg;
+}
+
+.end .motion {
+  @apply relative;
+  @apply w-full px-4 py-8;
+  @apply sm:max-w-3xl sm:pl-8 sm:pr-24 sm:pt-12 sm:pb-4;
+  @apply flex flex-col;
+}
+
+.end .title {
+  @apply mb-4;
+  @apply font-display;
+  @apply text-3xl;
+  @apply border-b-2 border-zinc-50 rounded;
+  @apply leading-relaxed;
+}
+
+.end .description {
+  @apply text-xl;
+  @apply font-sans font-medium;
+  @apply leading-relaxed;
+}

@@ -17,17 +17,19 @@ export default function Footer() {
         <div className={styles.body}>
           <div className={styles.item}>
             <p>&copy; Copyright</p>
-            <div className="w-16 h-1 mt-3 mb-4 mx-auto bg-amber-500 rounded-full"></div>
+            <div className="w-16 h-1 mt-3 mb-4 mx-auto bg-secondary-500 rounded-full"></div>
             <p>
-              <span className="font-semibold">Bondy Builder</span>
+              <span className="font-semibold">
+                {process.env.NEXT_PUBLIC_PROJECT_NAME}
+              </span>
             </p>
           </div>
           <div className={styles.item}>
             <p>Suivez-nous sur les réseaux</p>
-            <div className="w-16 h-1 mt-3 mb-4 bg-amber-500 rounded-full"></div>
+            <div className="w-16 h-1 mt-3 mb-4 bg-secondary-500 rounded-full"></div>
             <div className="inline-flex gap-2">
               <Link
-                href={`https://www.facebook.com/profile.php?id=61555889212804`}
+                href={process.env.NEXT_PUBLIC_FACEBOOK_PROFILE_URL as string}
                 target="_blank"
                 className="w-8 h-8 text-blue-600 hover:scale-125 active:scale-90 transition-all duration-300"
               >
@@ -35,7 +37,7 @@ export default function Footer() {
               </Link>
 
               <Link
-                href={`https://www.instagram.com/bondybuilder93/`}
+                href={process.env.NEXT_PUBLIC_INSTAGRAM_PROFILE_URL as string}
                 target="_blank"
                 className="w-8 h-8 text-pink-600 hover:scale-125 active:scale-90 transition-all duration-300"
               >
@@ -43,7 +45,7 @@ export default function Footer() {
               </Link>
 
               <Link
-                href={`https://www.linkedin.com/in/bondy-builder-ab25322ab/`}
+                href={process.env.NEXT_PUBLIC_LINKEDIN_PROFILE_URL as string}
                 target="_blank"
                 className="w-8 h-8 text-cyan-600 hover:scale-125 active:scale-90 transition-all duration-300"
               >
@@ -51,7 +53,7 @@ export default function Footer() {
               </Link>
 
               <Link
-                href={`https://twitter.com/BondyBuilder`}
+                href={process.env.NEXT_PUBLIC_XTWITTER_PROFILE_URL as string}
                 target="_blank"
                 className="w-8 h-8 text-zinc-50 hover:scale-125 active:scale-90 transition-all duration-300"
               >
@@ -61,7 +63,7 @@ export default function Footer() {
           </div>
           <div className={styles.item}>
             <p>Propulsé par</p>
-            <div className="w-16 h-1 mt-3 mb-4 mx-auto bg-amber-500 rounded-full"></div>
+            <div className="w-16 h-1 mt-3 mb-4 mx-auto bg-secondary-500 rounded-full"></div>
             <Link
               href={`https://www.petitboutde.cloud`}
               target="_blank"

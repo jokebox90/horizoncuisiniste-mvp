@@ -3,7 +3,7 @@
 .component {
   @apply w-full px-6 pt-12 pb-16;
   @apply sm:px-12 sm:pt-16 sm:pb-48;
-  @apply bg-zinc-900 text-zinc-50;
+  @apply bg-dark text-zinc-50;
 }
 
 .box {
@@ -15,7 +15,7 @@
   @apply w-full;
   @apply grid sm:grid-cols-3 gap-y-12;
   @apply place-items-stretch;
-  @apply text-base md:text-xl text-center font-sans;
+  @apply md:text-xl text-center font-sans;
 }
 
 .item {

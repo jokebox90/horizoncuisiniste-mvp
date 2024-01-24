@@ -2,10 +2,10 @@
 
 .component {
   @apply w-full max-w-xs px-6 pt-4 pb-2;
-  @apply bg-gradient-to-b from-amber-500 via-amber-500 to-amber-600;
-  @apply font-sans font-semibold text-amber-50;
+  @apply bg-gradient-to-b from-secondary-500 via-secondary-500 to-secondary-600;
+  @apply font-sans font-semibold text-secondary-50;
   @apply text-center text-lg sm:text-2xl leading-tight;
-  @apply rounded-xl shadow-2xl border-2 border-amber-500;
+  @apply rounded-full shadow-2xl border-2 border-secondary-500;
   @apply hover:scale-y-110 active:scale-90;
   @apply transition-all duration-300;
 }

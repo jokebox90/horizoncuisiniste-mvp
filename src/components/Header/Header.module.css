@@ -3,65 +3,80 @@
 .component {
   @apply relative;
   @apply w-full h-max min-h-screen;
-  @apply flex flex-col lg:flex-row;
-  @apply bg-zinc-900 text-zinc-50;
-  @apply font-serif text-base;
+  @apply flex flex-col;
+  @apply items-center justify-center;
+  @apply bg-primary-50 text-zinc-950;
+  @apply font-serif;
 }
 .head {
-  @apply w-full lg:max-w-md;
+  @apply relative;
+  @apply w-full h-screen sm:h-max;
+  @apply pt-32 pb-16 px-12;
   @apply flex items-center justify-center;
 }
 .head .image {
-  @apply w-80 lg:w-2/3;
-  @apply flex items-center justify-center;
+  @apply relative;
+  @apply w-80 sm:w-full h-80;
 }
 
 .head .image img {
-  @apply w-full h-auto;
-  @apply lg:bg-zinc-800 rounded-full;
+  @apply relative;
+  @apply w-auto h-80 mx-auto;
 }
 
 .body {
-  @apply relative flex-1;
-  @apply px-6 py-2 sm:pt-24;
-  @apply flex items-center justify-start;
-  @apply bg-zinc-50;
-}
-
-.body .image {
-  @apply absolute top-0 left-0;
-  @apply w-full h-full;
-  @apply flex items-center justify-end;
-  @apply object-cover object-center;
-}
-
-.body .image img {
-  @apply w-auto h-full;
-  @apply object-fill object-center;
+  @apply relative;
+  @apply flex;
 }
 
 .body .content {
-  @apply relative w-full max-w-lg p-4 sm:p-16;
+  @apply flex flex-col sm:flex-row;
+}
+
+.body .first {
+  @apply relative;
+  @apply w-4/5 sm:w-2/5;
+  @apply p-4;
+  @apply sm:py-16 sm:pl-16 sm:pr-8;
   @apply flex flex-col;
-  @apply bg-zinc-950 bg-opacity-40 rounded-lg;
+  @apply bg-primary-500 rounded-e-3xl;
+  @apply text-zinc-50;
   @apply whitespace-break-spaces break-words;
   @apply sm:whitespace-normal sm:break-words;
 }
 
-.body .content .company {
-  @apply uppercase font-bold font-sans;
+.body .first .company {
+  @apply uppercase;
+  @apply font-bold;
+  @apply font-sans;
+  @apply leading-none;
+  @apply mb-5;
 }
 
-.body .content .divider {
+.body .first .divider {
   @apply w-1/6 h-1;
-  @apply mt-3 mb-4 sm:mb-16;
-  @apply bg-amber-500;
+  @apply mb-4 sm:mb-16;
+  @apply bg-secondary-500;
 }
 
-.body .content .title {
-  @apply font-sans text-3xl sm:text-5xl mb-4;
+.body .first .title {
+  @apply font-display leading-loose;
+  @apply text-3xl sm:text-6xl;
 }
 
-.body .content .text {
-  @apply font-handwriting text-xl sm:text-4xl mb-8 last:mb-0;
+.body .first .text {
+  @apply font-writer text-xl sm:text-4xl mb-8 last:mb-0;
+}
+
+.body .last {
+  @apply relative;
+  @apply w-full sm:w-3/5;
+  @apply py-8 px-6 sm:py-44 sm:px-12;
+  @apply flex flex-col;
+  @apply items-center justify-start;
+}
+
+.body .last .text {
+  @apply relative;
+  @apply text-xl font-sans;
 }

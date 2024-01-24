@@ -2,7 +2,7 @@
 
 import styles from "@/components/Header/Header.module.css";
 import logoPNG from "@/static/img/logo.png";
-import salonJPG from "@/static/img/salon.jpg";
+import bgPNG from "@/static/img/bg.png";
 import { Variants, motion, useInView } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
@@ -36,36 +36,34 @@ export default function Header() {
       </div>
 
       <div ref={ref} className={styles.body}>
-        <motion.div
-          initial="revealInitial"
-          animate={animate ? "reveal" : "revealInitial"}
-          variants={variants}
-          className={styles.image}
-        >
-          <Image src={salonJPG} alt="Salon" width={1280} height={960} />
-        </motion.div>
-
         <div className={styles.content}>
-          <motion.div
-            initial="slideInRightInitial"
-            animate={animate ? "slideInRight" : "slideInRightInitial"}
-            variants={variants}
-          >
-            <h1 className={styles.company}>Bondy builder</h1>
+          <div className={styles.first}>
+            <motion.div
+              initial="slideInRightInitial"
+              animate={animate ? "slideInRight" : "slideInRightInitial"}
+              variants={variants}
+            >
+              <h1 className={styles.company}>Horizon Cuisiniste</h1>
 
-            <div className={styles.divider}></div>
+              <div className={styles.divider}></div>
 
-            <h2 className={styles.title}>
-              Une idée d&apos;aménagement à concrétiser ?
-            </h2>
+              <h2 className={styles.title}>
+                Quelle est la recette d'une rénovation de cuisine réussie&nbsp;?
+              </h2>
+            </motion.div>
+          </div>
 
+          <div ref={ref} className={styles.last}>
             <p className={styles.text}>
-              Ensemble, matérialisons votre vision de la décoration et des
-              travaux d&apos;intérieur.
+              Vous en avez assez de votre ancienne cuisine qui a perdu de son
+              éclat ? Préparer un repas devient plus une corvée qu'un plaisir ?
+              Chez Horizon Cuisiniste à Chennevières, on transforme ce rêve en
+              réalité. Laissez-nous réinventer votre espace avec une cuisine
+              moderne et fonctionnelle, où cuisiner redevient un véritable plaisir.
             </p>
-          </motion.div>
 
-          <CallToAction />
+            <CallToAction />
+          </div>
         </div>
       </div>
     </header>

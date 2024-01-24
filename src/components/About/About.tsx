@@ -1,8 +1,8 @@
 // src/components/About/About.tsx
 
 import styles from "@/components/About/About.module.css";
-import designPNG from "@/static/img/logo-2.png";
-import parisJPG from "@/static/img/paris.jpg";
+import designPNG from "@/static/img/design-1.png";
+import parisJPG from "@/static/img/paris-bg.jpg";
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
@@ -13,7 +13,6 @@ export default function About() {
   const ref = useRef<HTMLDivElement>(null);
   const ref2 = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref);
-  const isInView2 = useInView(ref2);
 
   return (
     <article id="about" ref={ref} className={styles.component}>
@@ -58,22 +57,13 @@ export default function About() {
           >
             <h2 className={styles.title}>Qui sommes-nous ?</h2>
             <p className={styles.text}>
-              Situés au cœur de la dynamique de la ville, nous sommes fiers de
-              porter le nom de &apos;BONDY&apos; comme une marque. Bondy est une
-              collectivité engagée avec vitalité et énergie dans un mode de vie
-              basé sur le bien-être et le progrès. Notre philosophie
-              s&apos;inspire de sa solidité, de sa persévérance et de son
-              dévouement, Nous portons toutes ces valeurs dans chacun des
-              projets pour créer des espaces equilibrés entre élégance et
-              prospérité.
-            </p>
-            <p className={styles.text}>
-              Le terme &apos;BUILDER&apos;, associé à notre nom, représente
-              notre conscience des détails et notre passion pour des
-              architectures raffinées. Chaque espace que nous concevons est le
-              fruit d&apos;une quête harmonieuse d&apos;excellence. Ils
-              reflétant notre promesse de créer des intérieurs où chaque élément
-              est en parfaite symbiose avec le confort qui fait votre fierté.
+              Rencontrez l'équipe d'Horizon Cuisiniste, des artisans passionnés
+              par la création de cuisines uniques. Basés au cœur du
+              Val-de-Marne, nous apportons notre savoir-faire artisanal à chaque
+              projet. Avec un œil attentif pour le détail et un engagement
+              envers un service client exceptionnel, nous sommes prêts à faire
+              de votre projet de cuisine une réalité pleine de caractère et de
+              moments inoubliables.
             </p>
           </motion.div>
 

@@ -4,8 +4,7 @@ import {
   createContext,
   useContext,
   ReactNode,
-  MouseEventHandler,
-  useRef,
+  MouseEventHandler
 } from "react";
 import Button from "@/components/Button/Button";
 
@@ -76,7 +75,7 @@ export function CalendlyPopUp() {
   const { isCalendlyPopUpOpen, closeCalendlyPopUp } = useCalendlyPopUpContext();
   return (
     <CalendlyPopUpBase
-      url="https://calendly.com/bondybuilder/30min"
+      url="https://calendly.com/horizoncuisiniste/30min"
       rootElement={
         (typeof window !== "undefined"
           ? document.getElementById("__next")

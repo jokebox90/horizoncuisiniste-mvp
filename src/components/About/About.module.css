@@ -4,7 +4,7 @@
   @apply relative;
   @apply w-full h-max;
   @apply text-zinc-50;
-  @apply font-serif text-base;
+  @apply font-serif;
 }
 
 .box {
@@ -15,7 +15,7 @@
 .head {
   @apply relative overflow-hidden;
   @apply w-full lg:max-w-md;
-  @apply bg-zinc-50 text-zinc-950;
+  @apply bg-primary-50 text-zinc-950;
   @apply flex flex-col sm:flex-row;
 }
 
@@ -35,18 +35,17 @@
   @apply relative overflow-hidden flex-1;
   @apply py-12 px-6;
   @apply sm:pt-32 sm:pb-24 sm:px-12;
-  @apply bg-zinc-800;
+  @apply bg-darker;
 }
 
 .body .image {
-  @apply absolute top-0 left-0;
-  @apply w-full h-full;
+  @apply absolute bottom-0 right-0;
+  @apply w-full h-1/2;
 }
 
 .body .image img {
-  @apply absolute bottom-0 -right-1/3;
-  @apply w-full h-1/2;
-  @apply opacity-15;
+  @apply w-full h-full;
+  @apply opacity-50;
   @apply object-contain object-right-bottom;
 }
 
