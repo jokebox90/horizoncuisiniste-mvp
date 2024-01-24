@@ -54,11 +54,12 @@ export default function Layout({ children }: LayoutProps) {
     <Fragment>
       <Head>
         <title>
-          Horizon Cuisiniste, contrétiser vos visions d&apos;intérieur
+          Horizon Cuisiniste, expert en rénovation de cuisines modernes et
+          fonctionnelles en Ile-de-France
         </title>
         <meta
           name="description"
-          content="Horizon Cuisiniste, vos experts en rénovation intérieure à Bondy. Spécialisés dans les installations électriques et de plomberie, transformations espaces de vie et l'aménagement avec élégance et confort. Services incluant peinture, pose de revêtements muraux et sols, la maçonnerie et la menuiserie. Faites nous confiance pour des solutions de décoration et de rénovation sur mesure, alliant qualité et attention du détail. Contactez-nous pour redéfinir votre espace avec style et fonctionnalité"
+          content="Horizon Cuisiniste à Chennevières se spécialise dans la rénovation de cuisines, transformant des espaces avec élégance et expertise artisanale. Profitez de services complets, de la démolition à l'installation de meubles et appareils modernes. Obtenez un devis gratuit pour une cuisine alliant style, confort et fonctionnalité."
         />
         <meta
           name="keywords"
@@ -66,12 +67,12 @@ export default function Layout({ children }: LayoutProps) {
         />
         <meta
           name="og:title"
-          content="Horizon Cuisiniste, sublimez votre intérieur avec une touche
-          d'artisanat unique"
+          content="Horizon Cuisiniste, expert en rénovation de cuisines modernes et
+          fonctionnelles en Ile-de-France"
         />
         <meta
           name="og:description"
-          content="Horizon Cuisiniste, vos experts en rénovation intérieure à Bondy. Spécialisés dans les installations électriques et de plomberie, transformations espaces de vie et l'aménagement avec élégance et confort. Services incluant peinture, pose de revêtements muraux et sols, la maçonnerie et la menuiserie."
+          content="Horizon Cuisiniste à Chennevières se spécialise dans la rénovation de cuisines, transformant des espaces avec élégance et expertise artisanale. Profitez de services complets, de la démolition à l'installation de meubles et appareils modernes. Obtenez un devis gratuit pour une cuisine alliant style, confort et fonctionnalité."
         />
         <meta name="og:image" content={logoPNG.src} />
         <link rel="icon" type="image/x-icon" href={primaryPNG.src} />
