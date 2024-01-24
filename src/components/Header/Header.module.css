@@ -11,17 +11,16 @@
 .head {
   @apply relative;
   @apply w-full h-screen sm:h-max;
-  @apply pt-32 pb-16 px-12;
+  @apply pt-32 pb-16 px-6;
   @apply flex items-center justify-center;
 }
 .head .image {
   @apply relative;
-  @apply w-80 sm:w-full h-80;
+  @apply w-80 h-80 sm:w-full;
 }
 
 .head .image img {
-  @apply relative;
-  @apply w-auto h-80 mx-auto;
+  @apply relative mx-auto;
 }
 
 .body {
@@ -36,7 +35,7 @@
 .body .first {
   @apply relative;
   @apply w-4/5 sm:w-2/5;
-  @apply p-4;
+  @apply p-6;
   @apply sm:py-16 sm:pl-16 sm:pr-8;
   @apply flex flex-col;
   @apply bg-primary-500 rounded-e-3xl;
@@ -50,7 +49,7 @@
   @apply font-bold;
   @apply font-sans;
   @apply leading-none;
-  @apply mb-5;
+  @apply mb-5 mt-4;
 }
 
 .body .first .divider {
