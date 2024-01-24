@@ -48,7 +48,7 @@ export default function Header() {
               <div className={styles.divider}></div>
 
               <h2 className={styles.title}>
-                Quelle est la recette d'une rénovation de cuisine réussie&nbsp;?
+                Quelle est la recette d&apos;une rénovation de cuisine réussie&nbsp;?
               </h2>
             </motion.div>
           </div>
@@ -56,7 +56,7 @@ export default function Header() {
           <div ref={ref} className={styles.last}>
             <p className={styles.text}>
               Vous en avez assez de votre ancienne cuisine qui a perdu de son
-              éclat ? Préparer un repas devient plus une corvée qu'un plaisir ?
+              éclat ? Préparer un repas devient plus une corvée qu&apos;un plaisir ?
               Chez Horizon Cuisiniste à Chennevières, on transforme ce rêve en
               réalité. Laissez-nous réinventer votre espace avec une cuisine
               moderne et fonctionnelle, où cuisiner redevient un véritable plaisir.

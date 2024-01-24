@@ -57,7 +57,7 @@ export default function About() {
           >
             <h2 className={styles.title}>Qui sommes-nous ?</h2>
             <p className={styles.text}>
-              Rencontrez l'équipe d'Horizon Cuisiniste, des artisans passionnés
+              Rencontrez l&apos;équipe d&apos;Horizon Cuisiniste, des artisans passionnés
               par la création de cuisines uniques. Basés au cœur du
               Val-de-Marne, nous apportons notre savoir-faire artisanal à chaque
               projet. Avec un œil attentif pour le détail et un engagement
