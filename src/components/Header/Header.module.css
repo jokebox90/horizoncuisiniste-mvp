@@ -65,7 +65,9 @@
 }
 
 .body .first .text {
-  @apply font-writer text-xl sm:text-4xl mb-8 last:mb-0;
+  @apply mb-8 last:mb-0;
+  @apply font-writer text-xl sm:text-4xl;
+  @apply leading-relaxed;
 }
 
 .body .last {
@@ -79,4 +81,5 @@
 .body .last .text {
   @apply relative;
   @apply text-xl font-sans;
+  @apply leading-relaxed;
 }

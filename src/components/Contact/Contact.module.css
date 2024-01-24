@@ -38,6 +38,7 @@
 .head .text {
   @apply w-full max-w-3xl mx-auto mb-6;
   @apply font-sans text-lg md:text-xl;
+  @apply leading-relaxed;
 }
 
 .head .list {

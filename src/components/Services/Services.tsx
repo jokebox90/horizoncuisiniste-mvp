@@ -46,9 +46,15 @@ export default function Services({ data }: ServicesProps) {
           animate={isInView ? "slideInRightEarly" : "slideInRightInitial"}
           variants={variants}
         >
-          <h2 className={styles.title}>{data.title}</h2>
+          <h2
+            className={styles.title}
+            dangerouslySetInnerHTML={{ __html: data.title as string }}
+          />
 
-          <p className={styles.text}>{data.description}</p>
+          <p
+            className={styles.text}
+            dangerouslySetInnerHTML={{ __html: data.description as string }}
+          />
         </motion.div>
       </div>
 
@@ -146,15 +152,17 @@ function Card({ data }: CardProps) {
           />
         </motion.div>
 
-
         <motion.div
           initial="slideInRightInitial"
           animate={isInView ? "slideInRight" : "slideInRightInitial"}
           variants={variants}
           className={styles.motion}
         >
-        <div className={styles.overlay}></div>
-          <h3 className={styles.title}>{data.title}</h3>
+          <div className={styles.overlay}></div>
+          <h3
+            className={styles.title}
+            dangerouslySetInnerHTML={{ __html: data.title }}
+          />
 
           {Array.isArray(data.items) ? (
             <ul className={styles.list}>
