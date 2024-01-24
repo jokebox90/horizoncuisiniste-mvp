@@ -43,7 +43,7 @@ export default function Header() {
               animate={animate ? "slideInRight" : "slideInRightInitial"}
               variants={variants}
             >
-              <h1 className={styles.company}>Horizon Cuisiniste</h1>
+              <h1 className={styles.company}>{process.env.NEXT_PUBLIC_PROJECT_NAME}</h1>
 
               <div className={styles.divider}></div>
 

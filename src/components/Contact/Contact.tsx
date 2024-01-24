@@ -85,7 +85,7 @@ export default function Contact() {
                   <div className={styles.icon}>
                     <FontAwesomeIcon icon={faUserCheck} />
                   </div>
-                  Horizon Cuisiniste
+                  {process.env.NEXT_PUBLIC_PROJECT_NAME}
                 </li>
 
                 <li>
