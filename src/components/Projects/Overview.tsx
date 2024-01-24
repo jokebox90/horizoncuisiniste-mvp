@@ -65,13 +65,13 @@ export default function Overview({ data }: OverviewProps) {
           >
             {data.title ? (
               <div className={styles.title}>
-                <h3>{data.title}</h3>
+                <h3 dangerouslySetInnerHTML={{ __html: data.title }} />
               </div>
             ) : null}
 
             {data.description ? (
               <div className={styles.description}>
-                <p>{data.description}</p>
+                <p dangerouslySetInnerHTML={{ __html: data.description }} />
               </div>
             ) : null}
           </motion.div>
