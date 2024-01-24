@@ -75,7 +75,7 @@ export function CalendlyPopUp() {
   const { isCalendlyPopUpOpen, closeCalendlyPopUp } = useCalendlyPopUpContext();
   return (
     <CalendlyPopUpBase
-      url="https://calendly.com/horizoncuisiniste/30min"
+      url={process.env.NEXT_PUBLIC_CALENDLY_EVENT_URL as string}
       rootElement={
         (typeof window !== "undefined"
           ? document.getElementById("__next")
