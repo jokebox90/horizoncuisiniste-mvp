@@ -5,6 +5,7 @@
   @apply w-full h-max;
   @apply bg-primary-800 text-zinc-950;
   @apply font-serif;
+  @apply overflow-hidden;
 }
 
 .box {
