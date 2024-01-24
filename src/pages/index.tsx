@@ -107,7 +107,7 @@ export default function Home() {
           <p>
             Installés par nos soins, là où l&apos;élégance côtoie la
             fonctionnalité, ils transforment votre cuisine en un espace qui fait
-            "Wow !" dès le premier coup d&apos;œil.
+            &quot;Wow !&quot; dès le premier coup d&apos;œil.
           </p>
         </Fragment>
       ),
