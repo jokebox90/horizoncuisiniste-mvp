@@ -92,28 +92,28 @@ export default function Contact() {
                   <div className={styles.icon}>
                     <FontAwesomeIcon icon={faEnvelope} />
                   </div>
-                  horizoncuisiniste93@gmail.com
+                  {process.env.NEXT_PUBLIC_PROJECT_EMAIL}
                 </li>
 
                 {/* <li>
                   <div className={styles.icon}>
                     <FontAwesomeIcon icon={faMobilePhone} />
                   </div>
-                  01 23 45 67 89
+                  {process.env.NEXT_PUBLIC_PROJECT_PHONE_NUMBER}
                 </li> */}
 
                 {/* <li>
                   <div className={styles.icon}>
                     <FontAwesomeIcon icon={faRoad} />
                   </div>
-                  123, rue du Paradis
+                  {process.env.NEXT_PUBLIC_PROJECT_ADDRESS}
                 </li> */}
 
                 <li>
                   <div className={styles.icon}>
                     <FontAwesomeIcon icon={faCity} />
                   </div>
-                  93140, Bondy
+                  {process.env.NEXT_PUBLIC_PROJECT_LOCATION}
                 </li>
               </ul>
             </motion.div>
