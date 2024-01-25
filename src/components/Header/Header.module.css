@@ -11,7 +11,7 @@
 .head {
   @apply relative;
   @apply w-full h-screen sm:h-max;
-  @apply pt-32 pb-16 px-6;
+  @apply pt-16 sm:pt-32 pb-16 px-6;
   @apply flex items-center justify-center;
 }
 .head .image {
@@ -21,6 +21,8 @@
 
 .head .image img {
   @apply relative mx-auto;
+  @apply w-auto h-full;
+  @apply object-contain;
 }
 
 .body {
